@@ -7,6 +7,7 @@
 * [String Concatenation](#String-Concatenation)
 * [Properties](#Properties)
 * [Methods](#Methods)
+* [Built-in Objects](#Built-in-Objects)
 
 ## Console
 The console is a panel that displays important messages, like errors, for developers. Much of the work the computer does with our code is invisible to us by default. If we want to see things appear on our screen, we can print, or log, to our console directly.
@@ -94,3 +95,43 @@ When we use `console.log()` we're calling the `.log()` method on the `console`ob
   ```
 
 The methods can receive elements as an input, or *argument*, between the parentheses, like `.startsWith('H')`.
+
+## Built-in Objects
+In addition to console, there are other **objects built into JavaScript**.
+
+For example, if you wanted to perform more complex mathematical operations that arithmetic, JavaScript has the built-in `Math` object.
+
+The great thing about objects is that they have methods. In the next example we call the `.random()` method from the built-in Math object:
+
+  ```
+  console.log(Math.random());
+  // Prints a random number between 0 and 1
+  ```
+To generate a random number between 0 and 50, we could multiply this result by 50, like so:
+
+  ```
+  console.log(Math.random() * 50);
+  // Prints a random number between 0 and 50
+  ```
+To ensure the answer is a whole number, we can take advantage of another useful `Math` method called `Math.floor()`.
+
+`Math.floor()` takes a decimal number, and rounds down to the nearest whole number.
+
+```
+console.log(Math.floor(Math.random() * 50));
+// Prints a integer number between 0 and 50
+```
+
+Use the `.ceil()` method to calculate the smallest integer greater than or equal to `43.8`.
+
+```
+console.log(Math.ceil(43.8));
+// Prints 44
+```
+
+Use the `isInteger()` method from the `Number` object to check if `2017` is an integer.
+
+```
+console.log(Number.isInteger(34.2));
+// Prints false
+```
