@@ -69,3 +69,11 @@ The computer will join the strings exactly, so we needed to make sure to include
   console.log('front ' + 'space');      // Prints 'front space';
   console.log('middle' + ' ' + 'space'); // Prints 'middle space'
   ```
+
+## Properties
+When you intruduce a new piece of data into JavaScript program, the browser saves it as an instance of the data type.
+Every string instance has a property called `length` that store the number of characters in that string.
+
+  `console.log('Hello'.length); // Prints 5`
+
+The `.` is another operator, we call it *dot operator*.
