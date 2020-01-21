@@ -5,6 +5,8 @@
 * [Data Types](#Data-Types)
 * [Arithmetic Operators](#Arithmetic-Operators)
 * [String Concatenation](#String-Concatenation)
+* [Properties](#Properties)
+* [Methods](#Methods)
 
 ## Console
 The console is a panel that displays important messages, like errors, for developers. Much of the work the computer does with our code is invisible to us by default. If we want to see things appear on our screen, we can print, or log, to our console directly.
@@ -77,3 +79,18 @@ Every string instance has a property called `length` that store the number of ch
   `console.log('Hello'.length); // Prints 5`
 
 The `.` is another operator, we call it *dot operator*.
+
+## Methods
+Methods are actions we can perform.
+
+We *call*, or use, these methods by appending an instance with period(the dot operator), the name of the method, and opening and closing parentheses.
+
+When we use `console.log()` we're calling the `.log()` method on the `console`object.
+
+  ```
+  console.log('hello'.toUpperCase()); // Prints 'HELLO'
+  console.log('Hey'.startsWith('H')); // Prints true
+  console.log('   Remove whitespaces    '); // Prints 'Remove whitespaces'
+  ```
+
+The methods can receive elements as an input, or *argument*, between the parentheses, like `.startsWith('H')`.
