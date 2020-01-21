@@ -4,6 +4,7 @@
 * [Comments](#Comments)
 * [Data Types](#Data-Types)
 * [Arithmetic Operators](#Arithmetic-Operators)
+* [String Concatenation](#String-Concatenation)
 
 ## Console
 The console is a panel that displays important messages, like errors, for developers. Much of the work the computer does with our code is invisible to us by default. If we want to see things appear on our screen, we can print, or log, to our console directly.
@@ -57,3 +58,14 @@ An *operator* is a character that performs a task in our code. JavaScript has se
 3. Multiply: `*`
 4. Divide: `/`
 5. Remainder: `%`
+
+The remainder operator, sometimes called *modulo*, returns the number that remains after the right-hand number divides into the left-hand number as many times as it evenly can.
+
+## String Concatenation
+The process of appending one string to another is called *concatenation*.
+The computer will join the strings exactly, so we needed to make sure to include the space we wanted between the two strings.
+  ```
+  console.log('I love to ' + 'code.');  // Prints 'I love to code.'
+  console.log('front ' + 'space');      // Prints 'front space';
+  console.log('middle' + ' ' + 'space'); // Prints 'middle space'
+  ```
