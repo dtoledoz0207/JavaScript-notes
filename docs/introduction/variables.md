@@ -2,7 +2,9 @@
 
 * [Variables](#Variables)
 * [Create a Variable: var](#Create-a-Variable:-var)
-* [Create a Variable: let](#Create-a-Variable:-let)  
+* [Create a Variable: let](#Create-a-Variable:-let)
+* [Create a Variable: const](#Create-a-Variable:-const)
+
 
 ## Variables
 In programming, a variable is a container for a value. You can think of variables as little containers for information that live in a computer’s memory.
@@ -46,3 +48,12 @@ When we use `let` and even `var`, we can declare a variable without assigning th
   price = 350;
   console.log(price); // Prints 350
   ```
+
+## Create a Variable: const
+Just like with `var` and `let` you can store any value in a `const` variable.
+
+`const myName = 'David';`
+
+However, a `const` variable cannot be reassigned because it is *constant*. If you try to reassing a `const` variable, you'll get a `TypeError`.
+
+Constant variables *must* be assigned a value when declared. If you try to declare a `const` variable without a value, you'll get a `SyntaxError`.
