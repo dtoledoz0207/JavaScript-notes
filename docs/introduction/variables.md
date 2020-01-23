@@ -2,6 +2,7 @@
 
 * [Variables](#Variables)
 * [Create a Variable: var](#Create-a-Variable:-var)
+* [Create a Variable: let](#Create-a-Variable:-let)  
 
 ## Variables
 In programming, a variable is a container for a value. You can think of variables as little containers for information that live in a computer’s memory.
@@ -27,3 +28,21 @@ There are a few general rules for naming variables:
   * Variable names cannot start with numbers.
   * Variable names are case sensitive.
   * Variable names cannot be the same as *keywords*. For a comprehensive list of keywords check out [MDN's keyword documentation.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)
+
+## Create a Variable: let
+The `let` keyword signals that the variable can be reassigned a different value.
+
+  ```
+  let meal = 'Tacos';
+  console.log(meal); // Prints 'Tacos'
+  meal = 'Pizza';
+  console.log(meal); // Prints 'Pizza'
+  ```
+When we use `let` and even `var`, we can declare a variable without assigning the variable a value. In such a case, the variable will be automatically initialized with a value of `undefined`.
+
+  ```
+  let price;
+  console.log(price); // Prints undefined
+  price = 350;
+  console.log(price); // Prints 350
+  ```
