@@ -5,7 +5,8 @@
 * [Create a Variable: let](#Create-a-Variable:-let)
 * [Create a Variable: const](#Create-a-Variable:-const)
 * [Mathematical Assignment Operators](#Mathematical-Assignment-Operators)
-* [The Increment and Decrement Operator](#The-Increment-and-Decrement-Operator) 
+* [The Increment and Decrement Operator](#The-Increment-and-Decrement-Operator)
+* [String Concatenation with Variables](#String-Concatenation-with-Variables)
 
 
 ## Variables
@@ -102,3 +103,14 @@ console.log(b); // Output 19
 ```
 
 The variable’s value is updated and *assigned* as the new value of that variable.
+
+## String Concatenation with Variables
+Now, let’s go over how to connect, or concatenate, strings in variables.
+
+The `+` operator can be used to combine two string values even if those values are being stored in variables:
+
+```
+let myPet = 'armadillo';
+console.log('I own a pet ' + myPet + '.');
+// Output: 'I own a pet armadillo.'
+```
