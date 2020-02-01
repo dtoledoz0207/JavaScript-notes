@@ -8,6 +8,7 @@
 * [The Increment and Decrement Operator](#The-Increment-and-Decrement-Operator)
 * [String Concatenation with Variables](#String-Concatenation-with-Variables)
 * [String Interpolation](#String-Interpolation)
+* [typeof operator](#typeof-operator)
 
 
 ## Variables
@@ -130,4 +131,18 @@ Notice that:
 * a template literal is wrapped by backticks ` .
 * Inside the template literal, you'll see a placeholder, `${myPet}`.
 * When we interpolate `I own a pet ${myPet}.`, the output we print is the string: `I own a pet armadillo.`
+
+## typeof operator
+If you need to check the data type of a variable's value, you can use the `typeof` operator.
+
+```
+const unknown1 = 'foo';
+console.log(typeof unknown1); // Output: string
+
+const unknown2 = 10;
+console.log(typeof unknown2); // Output: number
+
+const unknown3 = true;
+console.log(typeof unknown3); // Output: boolean
+```
 
