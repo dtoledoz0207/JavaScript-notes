@@ -4,6 +4,7 @@
 * [Create a Variable: var](#Create-a-Variable:-var)
 * [Create a Variable: let](#Create-a-Variable:-let)
 * [Create a Variable: const](#Create-a-Variable:-const)
+* [Mathematical Assignment Operators](#Mathematical-Assignment-Operators)
 
 
 ## Variables
@@ -57,3 +58,29 @@ Just like with `var` and `let` you can store any value in a `const` variable.
 However, a `const` variable cannot be reassigned because it is *constant*. If you try to reassing a `const` variable, you'll get a `TypeError`.
 
 Constant variables *must* be assigned a value when declared. If you try to declare a `const` variable without a value, you'll get a `SyntaxError`.
+
+## Mathematical Assignment Operators
+
+```
+let w = 4;
+w += 1;
+
+console.log(w); // Output: 5
+```
+We're performing the mathematical operation of the first operator `+` using the number to the right, then reassigning `w` to the computed value.
+
+We also have access to other mathematical assignment operators: `-=`, `*=`, and `/=`.
+
+```
+let x = 20;
+x -= 5; // Can be written as x = x - 5
+console.log(x); // Output: 15
+
+let y = 50;
+y *= 2; // Can be written as y = y * 2;
+console.log(y); // Output: 100
+
+let z = 8;
+z /= 2; // Can be written as z = z/2;
+console.log(z); // Output: 4
+```
