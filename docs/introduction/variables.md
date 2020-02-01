@@ -7,6 +7,7 @@
 * [Mathematical Assignment Operators](#Mathematical-Assignment-Operators)
 * [The Increment and Decrement Operator](#The-Increment-and-Decrement-Operator)
 * [String Concatenation with Variables](#String-Concatenation-with-Variables)
+* [String Interpolation](#String-Interpolation)
 
 
 ## Variables
@@ -114,3 +115,19 @@ let myPet = 'armadillo';
 console.log('I own a pet ' + myPet + '.');
 // Output: 'I own a pet armadillo.'
 ```
+
+## String Interpolation
+In the ES6 version of JavaScript, we can insert, or *interpolate*, variables into strings using *template literals*.
+
+```
+let myPet = 'armadillo;
+console.log(`I own pet ${myPet}`);
+// Output: I own pet armadillo
+```
+
+Notice that:
+
+* a template literal is wrapped by backticks ` .
+* Inside the template literal, you'll see a placeholder, `${myPet}`.
+* When we interpolate `I own a pet ${myPet}.`, the output we print is the string: `I own a pet armadillo.`
+
