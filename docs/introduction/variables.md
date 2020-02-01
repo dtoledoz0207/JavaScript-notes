@@ -5,6 +5,7 @@
 * [Create a Variable: let](#Create-a-Variable:-let)
 * [Create a Variable: const](#Create-a-Variable:-const)
 * [Mathematical Assignment Operators](#Mathematical-Assignment-Operators)
+* [The Increment and Decrement Operator](#The-Increment-and-Decrement-Operator) 
 
 
 ## Variables
@@ -84,3 +85,20 @@ let z = 8;
 z /= 2; // Can be written as z = z/2;
 console.log(z); // Output: 4
 ```
+
+## The Increment and Decrement Operator
+Other mathematical assignment operators include the *increment operator* (`++`) and *decrement operator* (`--`).
+
+The increment operator will increase the value of the variable by 1. The decrement operator will decrease the value of the variable by 1. For example:
+
+```
+let a = 10;
+a++;
+console.log(a); // Output: 11
+
+let b = 20;
+b--;
+console.log(b); // Output 19
+```
+
+The variable’s value is updated and *assigned* as the new value of that variable.
