@@ -2,6 +2,7 @@
 
 * [What are Conditional Statements?](#What-are-Conditional-Statements?)
 * [The if keyword](#The-if-keyword)
+* [If...Else Statements](#If...Else-Statements)
 
 
 ## What are Conditional Statements?
@@ -35,3 +36,22 @@ The `if` statement is composed of:
 * If the condition evaluates to `true`, the code inside the curly braces `{}` runs, or *executes*.
 * If the condition evaluates to `false`, the block won't execute.
 
+## If...Else Statements
+If we wanted to add some default behavior to the `if` statement, we can add an `else` statement to run a block of code when the condition evaluates to `false`.
+
+```
+if (false) {
+  console.log('The code in this block will not run');
+} else {
+  console.log('But the code in this block will!');
+}
+// Prints "But the code in this block will!"
+```
+
+An `else` statement must be paired with an `if` statement, and together they are referred to as an `if...else` statement.
+
+* Uses the `else` keyword following the code block of an `if` statement.
+* Has a code block that is wrapped by a set of curly braces `{}`.
+* The code inside the `else` statement code block will execute when the `if` statement's condition evaluates to false.
+
+`if..else` statements allow us to automate solutions to yes-or-no questions, also known as *binany decisions*.
