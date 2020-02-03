@@ -3,6 +3,7 @@
 * [What are Conditional Statements?](#What-are-Conditional-Statements?)
 * [The if keyword](#The-if-keyword)
 * [If...Else Statements](#If...Else-Statements)
+* [Comparison Operators](#Comparison-Operators)
 
 
 ## What are Conditional Statements?
@@ -55,3 +56,14 @@ An `else` statement must be paired with an `if` statement, and together they are
 * The code inside the `else` statement code block will execute when the `if` statement's condition evaluates to false.
 
 `if..else` statements allow us to automate solutions to yes-or-no questions, also known as *binany decisions*.
+
+
+## Comparison Operators
+When writting conditional statements, sometimes we need to use different types of operators to compare values. These operators are called *comparison operators*.
+
+* Less than: `<`
+* Greater than: `>`
+* Less than or equal to: `<=`
+* Greater than or equal to: `>=`
+* Is equal to: `===`
+* Is NOT equal to: `!==`
