@@ -4,6 +4,7 @@
 * [The if keyword](#The-if-keyword)
 * [If...Else Statements](#If...Else-Statements)
 * [Comparison Operators](#Comparison-Operators)
+* [Logical Operators](#Logical-Operators)
 
 
 ## What are Conditional Statements?
@@ -67,3 +68,42 @@ When writting conditional statements, sometimes we need to use different types o
 * Greater than or equal to: `>=`
 * Is equal to: `===`
 * Is NOT equal to: `!==`
+
+## Logical Operators
+Working with conditionals means that we will be using booleans, `true` or `false` values. In JavaScript, there are operators that work with boolean values known as *logical operators*. We can use logical operators to add more sophisticated logic to our conditionals.
+
+* the *and* operator (`&&`)
+* the *or* operator (`||`)
+* the *not* operator, otherwise known as the *bang* operator (`!`)
+
+When using the `&&` operator, both conditions *must* evaluate to `true` for the entire condition to evaluate to `true` and execute.
+Otherwise, if either condition is `false`, the `&&` condition will evaluate to `false` and the `else` block will execute.
+
+```
+if (stopLight === 'green' && pedestrians === 0) {
+  console.log('Go!');
+} else {
+  console.log('Stop');
+}
+```
+
+When using the `||` operator, only one of the conditions must evaluate to `true` for the overall statement to evaluate to `true`.
+If the first condition in an `||` statement evaluates to `true`, the second condition won't even be checked. Only if the first condition evaluates to `false`, the second one will be evaluated.
+
+```
+if (day === 'Saturday' || day === 'Sunday') {
+  console.log('Enjoy the weekend!');
+} else {
+  console.log('Do some work.');
+}
+```
+
+The `!` *not operator* reverses, or *negates*, the value of a boolean:
+
+```
+let excited = true;
+console.log(!excited); // Prints false
+
+let sleepy = false;
+console.log(!sleepy); // Prints true
+```
