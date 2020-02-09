@@ -5,6 +5,7 @@
 * [If...Else Statements](#If...Else-Statements)
 * [Comparison Operators](#Comparison-Operators)
 * [Logical Operators](#Logical-Operators)
+* [Truthy and Falsy](#Truthy-and-Falsy)
 
 
 ## What are Conditional Statements?
@@ -106,4 +107,37 @@ console.log(!excited); // Prints false
 
 let sleepy = false;
 console.log(!sleepy); // Prints true
+```
+
+## Truthy and Falsy
+Somethimes, you'll want to check if a variable exists and you won't necessary want it to equal a specific value. You'll only check to see if the variable has been assigned a value.
+
+```
+let myVariable = 'I Exists!';
+if (myVariable) {
+  console.log(myVariable);
+} else {
+  console.log('The variable does not exist.');
+}
+
+// Prints 'I Exists!'
+```
+
+So which values are *falsy* or evaluate to `false` when checked as a condition? The list of falsy values includes:
+
+* `0`
+* Empty strings like `""` or `''`
+* `null` which represent when there is no value at all
+* `undefined` which represent when a declared variable lacks a value
+* `NaN`, or Not a Number
+
+```
+let numberOfApples = 0;
+if (numberOfApples) {
+  console.log('Let us eat apples!');
+} else {
+  console.log('No apples left!');
+}
+
+// Prints 'No apples left!'
 ```
