@@ -6,6 +6,7 @@
 * [Comparison Operators](#Comparison-Operators)
 * [Logical Operators](#Logical-Operators)
 * [Truthy and Falsy](#Truthy-and-Falsy)
+* [Truthy and Falsy Assignment](#Truthy-and-Falsy-Assignment)
 
 
 ## What are Conditional Statements?
@@ -141,3 +142,10 @@ if (numberOfApples) {
 
 // Prints 'No apples left!'
 ```
+
+## Truthy and Falsy Assignment
+JavaScript assigns the truthy value to a variable if you use the `||` operator in your assignment:
+
+`let defaultName = username || 'Stranger';`
+
+Because `||` or statements check the left-hand condition first, the variable `defaultName` will be assigned the actual value of `username` if is truthy, and it will be assigned the value of `'Stranger'` if `username` is falsy. This concept is also referred to as *short-circuit evaluation*.
