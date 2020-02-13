@@ -8,6 +8,7 @@
 * [Truthy and Falsy](#Truthy-and-Falsy)
 * [Truthy and Falsy Assignment](#Truthy-and-Falsy-Assignment)
 * [Ternary Operator](#Ternary-Operator)
+* [Else If Statement](#Else-If-Statement)
 
 
 ## What are Conditional Statements?
@@ -178,4 +179,25 @@ In the example above:
 * Two expresions follow the `?` and are separated by a colon `:`.
 * If the condition evaluates to `true`, the first expression executes.
 * If the condition evaluates to `false`, the second expression executes.
+
+## Else If Statement
+We can add more conditions to our `if...else` with an `else if` statement. The `else if` statement allows for more than two possible outcomes.
+
+The `else if` statement always comes after the `if` statement and before the `else` statement. The `else if` statement also takes a condition.
+
+```
+let stopLight = 'yellow';
+
+if (stopLight === 'red') {
+  console.log('Stop!');
+} else if (stopLight === 'yellow') {
+  console.log('Slow down.');
+} else if (stopLight === 'green') {
+  console.log('Go!');
+} else {
+  console.log('Caution, unknown!');
+}
+```
+
+The `else if` statement allows you to have multiple possible outcomes. `if`/`else if`/`else` statements are read from top to bottom, so the first condition that evaluates to `true` from the top to bottom is the block that gets executed.
 
