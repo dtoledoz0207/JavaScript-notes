@@ -7,6 +7,7 @@
 * [Logical Operators](#Logical-Operators)
 * [Truthy and Falsy](#Truthy-and-Falsy)
 * [Truthy and Falsy Assignment](#Truthy-and-Falsy-Assignment)
+* [Ternary Operator](#Ternary-Operator)
 
 
 ## What are Conditional Statements?
@@ -149,3 +150,32 @@ JavaScript assigns the truthy value to a variable if you use the `||` operator i
 `let defaultName = username || 'Stranger';`
 
 Because `||` or statements check the left-hand condition first, the variable `defaultName` will be assigned the actual value of `username` if is truthy, and it will be assigned the value of `'Stranger'` if `username` is falsy. This concept is also referred to as *short-circuit evaluation*.
+
+## Ternary Operator
+We can use a *ternary operator* to simplify an `if...else` statement.
+
+Take a look at the `if...else` statement example:
+
+```
+let isNightTime = true;
+
+if (isNightTime) {
+  console.log('Turn on the lights!');
+}else {
+  console.log('Turn off the lights!');
+}
+```
+
+We can use a *ternary operator* to perform the same functionality:
+
+```
+isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
+```
+
+In the example above:
+
+* The condition, `isNightTime`, is provided before the `?`.
+* Two expresions follow the `?` and are separated by a colon `:`.
+* If the condition evaluates to `true`, the first expression executes.
+* If the condition evaluates to `false`, the second expression executes.
+
