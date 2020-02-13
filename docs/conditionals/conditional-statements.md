@@ -9,6 +9,7 @@
 * [Truthy and Falsy Assignment](#Truthy-and-Falsy-Assignment)
 * [Ternary Operator](#Ternary-Operator)
 * [Else If Statement](#Else-If-Statement)
+* [The switch keyword](#The-switch-keyword)
 
 
 ## What are Conditional Statements?
@@ -201,3 +202,27 @@ if (stopLight === 'red') {
 
 The `else if` statement allows you to have multiple possible outcomes. `if`/`else if`/`else` statements are read from top to bottom, so the first condition that evaluates to `true` from the top to bottom is the block that gets executed.
 
+## The switch keyword
+A switch statement provides an alternative syntax that is easier to read and write.
+
+```
+let groceryItem = 'papaya';
+
+switch (groceryItem) {
+  case 'tomato':
+    console.log('Tomatoes are $0.49');
+    break;
+  case 'lime':
+    console.log('Limes are $1.49');
+    break;
+  case 'papaya':
+    console.log('Papayas are $1.29');
+    break;
+  default:
+    console.log('Invalid item');
+    break;
+}
+```
+
+* The `break` keyword tells the computer to exit the block and not execute any more code or check any other cases inside the code block. Note: Without the `break` keyword at the end of each case, the program would execute the code for all matching cases and the default code as well. 
+* At the end of each `switch` statement, there is a `default` statement. If none of the `case`s are true, then the code in the default statement will run.
