@@ -3,6 +3,7 @@
 * [What are functions?](#What-are-functions?)
 * [Function Declarations](#Function-Declarations)
 * [Calling a function](#Calling-a-function)
+* [Parameters and Arguments](#Parameters-and-Arguments)
 
 
 
@@ -30,3 +31,16 @@ function getGreeting() {
 
 getGreeting();
 ```
+
+## Parameters and Arguments
+When declaring a function, we can specify its *parameters*. Parameters allow functions to accept inputs(s) and perform task using the input(s). We use paremeters as placeholders for information that will be passed to the function when it is called.
+
+```
+function calculateArea(width, height) {
+  console.log(width * height);
+}
+```
+
+When calling a function that has parameters, we specify the values in the parentheses that follow the function name. The values that are passed to the function when it is called are called *arguments*. Arguments can be passed to the function as values or variables.
+
+`calculateArea(10, 6);`
