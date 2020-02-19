@@ -2,6 +2,7 @@
 
 * [What are functions?](#What-are-functions?)
 * [Function Declarations](#Function-Declarations)
+* [Calling a function](#Calling-a-function)
 
 
 
@@ -18,3 +19,14 @@ A function declaration consists of:
 We should also be aware of the *hosting* feature in JavaScript which allows access to function declarations before they're defined.
 
 Since hoisting isn’t considered good practice, we simply want you to be aware of this feature.
+
+## Calling a function
+The code inside a function body runs, or *executes*, only when the function is *called*. To call a function in your code, you type the function name followed by parentheses.
+
+```
+function getGreeting() {
+  console.log('Hello world!');
+}
+
+getGreeting();
+```
