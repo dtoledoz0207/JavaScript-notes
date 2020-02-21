@@ -4,6 +4,7 @@
 * [Function Declarations](#Function-Declarations)
 * [Calling a function](#Calling-a-function)
 * [Parameters and Arguments](#Parameters-and-Arguments)
+* [Default parameters](#Default-parameters)
 
 
 
@@ -44,3 +45,19 @@ function calculateArea(width, height) {
 When calling a function that has parameters, we specify the values in the parentheses that follow the function name. The values that are passed to the function when it is called are called *arguments*. Arguments can be passed to the function as values or variables.
 
 `calculateArea(10, 6);`
+
+## Default parameters
+Feature added in ESC6.
+
+Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is `undefined` when called.
+
+```
+function greeting (name = 'stranger') {
+  console.log(`Hello, ${name}!`);
+}
+
+greeting('Nick'); // Output: Hello, Nick!
+greeting();       // Output: Hello, stranger!
+```
+
+By using a default parameter, we account for situations when an argument isn't passed into a function that is expecting an argument.
