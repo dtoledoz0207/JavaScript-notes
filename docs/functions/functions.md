@@ -6,6 +6,7 @@
 * [Parameters and Arguments](#Parameters-and-Arguments)
 * [Default parameters](#Default-parameters)
 * [Return](#Return)
+* [Helper Function](#Helper-Function)
 
 
 
@@ -80,3 +81,19 @@ function rectangleArea(width, height) {
 
 If an argument for `width` or `height` is less than `0`, then `rectangleArea()` will return `'You need positive integers to calculate area!'`. The second return statement `width * height` will not run.
 
+## Helper Function
+We can also use the return value of a function inside another function. These functions being called within another function are often referred to as *helper function*.
+
+```
+function multiplyByNineFifths(number) {
+  return number * (9/5);
+}
+
+function getFahrenheit(celsius) {
+  return multiplyByNineFifths(celsius) + 32;
+}
+
+getFahrenheit(15); // return 59
+```
+
+We can use functions to section off small bits of logic or tasks, then use them when we need to. Writing helper functions can help take large and difficult tasks and break them into smaller and more manageable tasks.
