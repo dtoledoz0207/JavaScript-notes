@@ -7,6 +7,7 @@
 * [Default parameters](#Default-parameters)
 * [Return](#Return)
 * [Helper Function](#Helper-Function)
+* [Function Expressions](#Function-Expressions)
 
 
 
@@ -97,3 +98,23 @@ getFahrenheit(15); // return 59
 ```
 
 We can use functions to section off small bits of logic or tasks, then use them when we need to. Writing helper functions can help take large and difficult tasks and break them into smaller and more manageable tasks.
+
+## Function Expressions
+Another way to define a function is to use a *function expression*.
+
+To define a function inside an expression, we can use the `function` keyword.
+
+In a function expression, the function name is usually omitted.
+
+A function with no name is called an *anonymous function*.
+
+A function expression is often stored in a variable in order to refer to it.
+
+```
+const calculateArea = function(width, height) {
+  const area = width * height;
+  return area;
+};
+```
+
+Declare a variable to make the variable's name be the name, or identifier, of your function. Since the release of ES6, it is common practice to use `const` as the keyword to declare the variable.
