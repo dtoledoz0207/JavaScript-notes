@@ -5,6 +5,7 @@
 * [Calling a function](#Calling-a-function)
 * [Parameters and Arguments](#Parameters-and-Arguments)
 * [Default parameters](#Default-parameters)
+* [Return](#Return)
 
 
 
@@ -61,3 +62,21 @@ greeting();       // Output: Hello, stranger!
 ```
 
 By using a default parameter, we account for situations when an argument isn't passed into a function that is expecting an argument.
+
+## Return
+To pass back information from the function call, we use a return statement. To create a return statement, we use the `return` keyword followed by the value that we wish to return.
+
+When a `return` statement is used in a function body, the execution of the function is stopped and the code that follows it will not be executed.
+
+```
+function rectangleArea(width, height) {
+  if (width < 0 || height < 0) {
+    return 'You need positive integers to calculate area!';
+  }
+
+  return width * height;
+}
+```
+
+If an argument for `width` or `height` is less than `0`, then `rectangleArea()` will return `'You need positive integers to calculate area!'`. The second return statement `width * height` will not run.
+
