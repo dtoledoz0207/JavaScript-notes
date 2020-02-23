@@ -9,6 +9,7 @@
 * [Helper Function](#Helper-Function)
 * [Function Expressions](#Function-Expressions)
 * [Arrow Functions](#Arrow-Functions)
+* [Concise Body Arrow Functions](#Concise-Body-Arrow-Functions)
 
 
 
@@ -129,5 +130,34 @@ Arrow functions remove the need to type out the keyword `function` every time yo
 const rectangleArea = (width, height) => {
   let area = width * height;
   retuen area;
+};
+```
+
+## Concise Body Arrow Functions
+JavaScript also provides several ways to refactor arrow function syntax. The most condensed form of the function is known as *concise body*.
+
+1. Functions that take only a single parameter do not need that parameter to be enclosed in parentheses. However, if a function takes a zero or multiple parameters, parameters are required.
+
+  ```
+  ZERO PARAMETERS
+  const functionName = () => {};
+
+  ONE PARAMETER
+  const functionName = paramOne => {};
+
+  TWO OR MORE PARAMETERS
+  const functionName = (paramOne, paramTwo) => {};
+  ```
+
+2. A function body composed of single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned. The contents of the block should immediately follow the arrow `=>` and the `return` keyword can be removed. This is referred to as *implicit return*.
+
+```
+SINGLE-LINE BLOCK
+const sumNumbers = number => number + number;
+
+MULTI-LINE BLOCK
+const sumNumbers = number => {
+  const sum = number + number;
+  return sum;
 };
 ```
