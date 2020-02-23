@@ -8,6 +8,7 @@
 * [Return](#Return)
 * [Helper Function](#Helper-Function)
 * [Function Expressions](#Function-Expressions)
+* [Arrow Functions](#Arrow-Functions)
 
 
 
@@ -118,3 +119,15 @@ const calculateArea = function(width, height) {
 ```
 
 Declare a variable to make the variable's name be the name, or identifier, of your function. Since the release of ES6, it is common practice to use `const` as the keyword to declare the variable.
+
+## Arrow Functions
+ES6 introduced *arrow function syntax*, shorter way to write functions by using the special "fat arrow" `() =>` notation.
+
+Arrow functions remove the need to type out the keyword `function` every time you need to create a function. Instead, you first include the parameters inside the `( )` and then add an arrow `=>` that points to the function body surrounded in `{ }`.
+
+```
+const rectangleArea = (width, height) => {
+  let area = width * height;
+  retuen area;
+};
+```
