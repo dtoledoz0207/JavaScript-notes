@@ -5,3 +5,4 @@
   * [Variables](docs/introduction/variables.md)
   * [Conditional Statements](docs/conditionals/conditional-statements.md)
   * [Functions](docs/functions/functions.md)
+  * [Scope](docs/scope/scope.md)
