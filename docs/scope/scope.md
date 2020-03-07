@@ -2,6 +2,7 @@
 
 * [Scope](#Scope)
 * [Block and Scope](#Block-and-Scope)
+* [Global Scope](#Global-Scope)
 
 
 ## Scope
@@ -26,3 +27,17 @@ console.log(logCitySkyline()) // Prints The stars over the Empire State Building
 ```
 
 `logCitySkyline()` function is able to access both variables without any problems.
+
+## Global Scope
+In *global scope*, variables are declared outside of block. These variables are called *global variables*. Because global variables are not bound inside a block, they can be accessed by any code in the program, including code in blocks.
+
+Example of global scope:
+```
+const color = 'blue';
+
+const returnSkyColor = () => {
+  return color; //blue
+}
+
+console.log(returnSkyColor()); //blue
+```
