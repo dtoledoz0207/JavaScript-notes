@@ -4,6 +4,7 @@
 * [Block and Scope](#Block-and-Scope)
 * [Global Scope](#Global-Scope)
 * [Block Scope](#Block-Scope)
+* [Scope Pollution](#Scope-Pollution)
 
 
 ## Scope
@@ -58,3 +59,21 @@ const logSkyColor = () => {
 logSkyColor(); //blue
 console.log(color); //ReferenceError
 ```
+
+## Scope Pollution
+*Scope pollution* is when we have too many global variables that exist in the global namespaces, or when we reuse variables across different scopes. Scope pollution makes it difficult to keep track of or different variables and set us up for potencial accidents.
+For example, globally scoped variables can collide with other variables that are more locally scoped, causing unexpected behavior in our code.
+
+Example of scope pollution in practice:
+```
+let num = 50;
+
+const logNum = () => {
+  num = 100; // Take note of this line of code
+  console.log(num);
+};
+
+logNum(); // Prints 100
+console.log(num); // Prints 100
+```
+While it's important to know what global scope is, it's best practice to not define variables in the global scope.
