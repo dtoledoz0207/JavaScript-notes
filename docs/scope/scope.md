@@ -3,6 +3,7 @@
 * [Scope](#Scope)
 * [Block and Scope](#Block-and-Scope)
 * [Global Scope](#Global-Scope)
+* [Block Scope](#Block-Scope)
 
 
 ## Scope
@@ -40,4 +41,20 @@ const returnSkyColor = () => {
 }
 
 console.log(returnSkyColor()); //blue
+```
+
+## Block Scope
+When a variable is definied inside a block, it is only accessible to the code within the curly braces `{}`. We say that variable has *block scope* because it is *only* accessible to the lines of the code within that block.
+
+Variables that are declared with block scope are known as *local variables*.
+
+Block scope example:
+```
+const logSkyColor = () => {
+  let color = 'blue';
+  console.log(color); //blue
+};
+
+logSkyColor(); //blue
+console.log(color); //ReferenceError
 ```
