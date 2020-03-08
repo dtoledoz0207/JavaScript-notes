@@ -6,3 +6,4 @@
   * [Conditional Statements](docs/conditionals/conditional-statements.md)
   * [Functions](docs/functions/functions.md)
   * [Scope](docs/scope/scope.md)
+  * [Arrays](docs/arrays/arrays.md)
