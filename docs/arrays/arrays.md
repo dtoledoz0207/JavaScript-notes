@@ -6,6 +6,7 @@
 * [Update Elements](#Update-Elements)
 * [Arrays with let and const](#Arrays-with-let-and-const)
 * [The .length property](#The-.length-property)
+* [The .push() Method](#The-.push()-Method)
 
 
 ## Arrays
@@ -69,3 +70,16 @@ const newYearsResolutions = ['Keep a journal', 'Take a falconry class'];
 console.log(newYearsResolutions.length);
 // Output: 2
 ```
+
+## The .push() Method
+`.push()` is a built-in JavaScript method that allows us to add items to the end of an array.
+
+```
+const itemTracker = ['item 0', 'item 1', 'item 2'];
+itemTracker.push('item 3', 'item 4');
+
+console.log(itemTracker);
+// Output: ['item 0', 'item 1', 'item 2', 'item 3', 'item 4']
+```
+
++ Notice that `.push()` changes, or *mutates*, `itemTracker`. You might also see `.push()` referred to as a *destructive* array method since it changes the initial array.
