@@ -10,6 +10,7 @@
 * [The .pop() Method](#The-.pop()-Method)
 * [More Arrays Methods](#More-Arrays-Methods)
 * [Arrays and Functions](#Arrays-and-Functions)
+* [Nested Arrays](#Nested-Arrays)
 
 
 ## Arrays
@@ -164,3 +165,26 @@ console.log(flowers);
 + We check the value of `flowers` and it now includes the `'lily'` element, The array was mutated.
 
 So when you pass an array into a function, if the array is mutated inside the function, that change will be maintained outside the function as well. You might also see this concept explained as *pass-by-reference* since what we're actually passing the function is a reference to where the variable memory is stored and changing the memory.
+
+## Nested Arrays
+When an array contains another array it is known as a *nested array*.
+
+`const nestedArr = [[1], [2, 3]];`
+
+To access the nested arrays we can use backet notation with the index value.
+
+```
+const nestedArr = [[1], [2, 3]];
+console.log(nestedArr[1]);
+// Output: [2, 3]
+```
+
+Then, if we wanted to access the elements within the nested array we can *chain*, or add on, more bracket notation with index values.
+
+```
+const nestedArr = [[1], [2, 3]];
+
+console.log(nestedArr[1]); // Output: [2, 3]
+
+console.log(nestedArr[1][0]); //Output: 2
+```
