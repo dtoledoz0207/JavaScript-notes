@@ -7,6 +7,7 @@
 * [Arrays with let and const](#Arrays-with-let-and-const)
 * [The .length property](#The-.length-property)
 * [The .push() Method](#The-.push()-Method)
+* [The .pop() Method](#The-.pop()-Method)
 
 
 ## Arrays
@@ -83,3 +84,21 @@ console.log(itemTracker);
 ```
 
 + Notice that `.push()` changes, or *mutates*, `itemTracker`. You might also see `.push()` referred to as a *destructive* array method since it changes the initial array.
+
+## The .pop() Method
+Another array method, `.pop()`, removes the last item of an array.
+
+```
+const newItemTracker = ['item 0', 'item 1', 'item 2'];
+
+const removed = newItemTracker.pop();
+
+console.log(newItemTracker);
+// Output: ['item 0', 'item 1']
+
+console.log(removed);
+// Output: item 2
+```
+
++ `.pop()` returns the value of the last element and it can be stored in in a variable to be used for later.
++ `.pop()` is a method that mutates the initial array.
