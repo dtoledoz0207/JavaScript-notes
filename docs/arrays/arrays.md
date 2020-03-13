@@ -5,6 +5,7 @@
 * [Accessing Elements](#Accessing-Elements)
 * [Update Elements](#Update-Elements)
 * [Arrays with let and const](#Arrays-with-let-and-const)
+* [The .length property](#The-.length-property)
 
 
 ## Arrays
@@ -58,3 +59,13 @@ The line, `seasons[3] = 'Autumn';` tells our program to change the item at index
 + Variables declared with `const` cannot be reassigned.
 
 However, elements in array declared with `const` remain mutable. Meaning that we can change the contents of a `const` array, but cannot reassign a new array or a different value.
+
+## The .length property
+One of an array's built-in properties is `length` and it returns the number of items in the array.
+
+```
+const newYearsResolutions = ['Keep a journal', 'Take a falconry class'];
+
+console.log(newYearsResolutions.length);
+// Output: 2
+```
