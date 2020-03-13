@@ -2,6 +2,7 @@
 
 * [Arrays](#Arrays)
 * [Create an Array](#Create-an-Array)
+* [Accessing Elements](#Accessing-Elements)
 
 
 ## Arrays
@@ -24,4 +25,17 @@ We can also save an array to a variable.
 
 ```
 let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle'];
+```
+
+## Accessing Elements
+Each element in an array has a numbered position knows as its *index*. We can access individual items using their index.
+
+Arrays in JavaScript are *zero-indexed*, meaning the positions start counting from `0` rather than `1`.
+
+You can also access individual characters in a string using bracket notation and the index. For instance:
+
+```
+const hello = 'Hello World';
+console.log(hello[6]);
+// Ouput: W
 ```
