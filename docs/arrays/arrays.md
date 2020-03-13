@@ -8,6 +8,7 @@
 * [The .length property](#The-.length-property)
 * [The .push() Method](#The-.push()-Method)
 * [The .pop() Method](#The-.pop()-Method)
+* [More Arrays Methods](#More-Arrays-Methods)
 
 
 ## Arrays
@@ -102,3 +103,41 @@ console.log(removed);
 
 + `.pop()` returns the value of the last element and it can be stored in in a variable to be used for later.
 + `.pop()` is a method that mutates the initial array.
+
+## More Arrays Methods
+You can read about all of the array methods that exist on the [Mozilla Developer Network (MDN) array documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
+
+Some arrays methods that are available to JavaScript developers include: `.join()`, `.slice()`, `.splice()`, `.shift()`, `.unshift()` and `.concat()` amongst many others.
+
+Below, we will explore some methods that we have not learned yet.
+
+1. Use the `.shift()` method to remove the first item from the array `groceryList`.
+```
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift();
+console.log(groceryList);
+// Output: ['bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains']
+```
+
+2. Use the `.unshift()` method to add `'popcorn'` to the beginning of the grocery list.
+```
+groceryList.unshift('popcorn');
+console.log(groceryList);
+
+// Output: ['popcorn', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains']
+```
+
+3. If you want to get `'bananas'`, `'coffe beans'` and `'brown rice'` from the grocery list. You can use `.slice()` to get a list of these three things.
+```
+console.log(groceryList.slice(1, 4));
+// Output: ['bananas', 'coffee beans', 'brown rice'];
+```
++ `.slice()` is non-mutating, that mean that this method does not change the original array.
+
+4. If you want to get the index of a particular element in an array, you can use `.indexOf()` method.
+```
+const pastaIndex = groceryList.indexOf('pasta');
+console.log(pastaIndex);
+// Output: 4
+```
