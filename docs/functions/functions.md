@@ -30,7 +30,7 @@ Since hoisting isn’t considered good practice, we simply want you to be aware 
 ## Calling a function
 The code inside a function body runs, or *executes*, only when the function is *called*. To call a function in your code, you type the function name followed by parentheses.
 
-```
+```js
 function getGreeting() {
   console.log('Hello world!');
 }
@@ -41,7 +41,7 @@ getGreeting();
 ## Parameters and Arguments
 When declaring a function, we can specify its *parameters*. Parameters allow functions to accept inputs(s) and perform task using the input(s). We use paremeters as placeholders for information that will be passed to the function when it is called.
 
-```
+```js
 function calculateArea(width, height) {
   console.log(width * height);
 }
@@ -56,7 +56,7 @@ Feature added in ESC6.
 
 Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is `undefined` when called.
 
-```
+```js
 function greeting (name = 'stranger') {
   console.log(`Hello, ${name}!`);
 }
@@ -72,7 +72,7 @@ To pass back information from the function call, we use a return statement. To c
 
 When a `return` statement is used in a function body, the execution of the function is stopped and the code that follows it will not be executed.
 
-```
+```js
 function rectangleArea(width, height) {
   if (width < 0 || height < 0) {
     return 'You need positive integers to calculate area!';
@@ -87,7 +87,7 @@ If an argument for `width` or `height` is less than `0`, then `rectangleArea()` 
 ## Helper Function
 We can also use the return value of a function inside another function. These functions being called within another function are often referred to as *helper function*.
 
-```
+```js
 function multiplyByNineFifths(number) {
   return number * (9/5);
 }
@@ -112,7 +112,7 @@ A function with no name is called an *anonymous function*.
 
 A function expression is often stored in a variable in order to refer to it.
 
-```
+```js
 const calculateArea = function(width, height) {
   const area = width * height;
   return area;
@@ -126,10 +126,10 @@ ES6 introduced *arrow function syntax*, shorter way to write functions by using 
 
 Arrow functions remove the need to type out the keyword `function` every time you need to create a function. Instead, you first include the parameters inside the `( )` and then add an arrow `=>` that points to the function body surrounded in `{ }`.
 
-```
+```js
 const rectangleArea = (width, height) => {
   let area = width * height;
-  retuen area;
+  return area;
 };
 ```
 
@@ -138,24 +138,24 @@ JavaScript also provides several ways to refactor arrow function syntax. The mos
 
 1. Functions that take only a single parameter do not need that parameter to be enclosed in parentheses. However, if a function takes a zero or multiple parameters, parameters are required.
 
-  ```
-  ZERO PARAMETERS
+  ```js
+  //ZERO PARAMETERS
   const functionName = () => {};
 
-  ONE PARAMETER
+  //ONE PARAMETER
   const functionName = paramOne => {};
 
-  TWO OR MORE PARAMETERS
+  //TWO OR MORE PARAMETERS
   const functionName = (paramOne, paramTwo) => {};
   ```
 
 2. A function body composed of single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned. The contents of the block should immediately follow the arrow `=>` and the `return` keyword can be removed. This is referred to as *implicit return*.
 
-```
-SINGLE-LINE BLOCK
+```js
+//SINGLE-LINE BLOCK
 const sumNumbers = number => number + number;
 
-MULTI-LINE BLOCK
+//MULTI-LINE BLOCK
 const sumNumbers = number => {
   const sum = number + number;
   return sum;

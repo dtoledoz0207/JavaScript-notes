@@ -29,13 +29,13 @@ A `for` loop contains three expressions separated by `;` inside the parentheses:
 3. an *iteration statement* is used to update the iterator variable on each loop.
 
 `for` loop syntax:
-```
+```js
 for (let counter = 0; counter < 4; counter++) {
   console.log(counter);
 }
 ```
 Output:
-```
+```js
 0
 1
 2
@@ -52,14 +52,14 @@ To run a backward `for` loop, we must:
 + The iterator should decrease in intervals after each iteration.
 
 Loop in reverse:
-```
+```js
 for (let counter = 3); counter >= 0; counter--) {
   console.log(counter);
 }
 ```
 
 Output:
-```
+```js
 3
 2
 1
@@ -70,14 +70,14 @@ Output:
 To loop through each element in an array, a `for` loop should use the array's `.length` property in its condition.
 
 `for` loops iterate on arrays:
-```
+```js
 const animals = ['Dog', 'Cat', 'Turtle'];
 for (let i = 0; i < animals.length; i++) {
   console.log(animals[i]);
 }
 ```
 Output:
-```
+```js
 Dog
 Cat
 Turtle
@@ -89,7 +89,7 @@ Notice how our stopping condition checks that `i` is less than `animals.length`.
 ## Nested Loops
 When we have a loop running inside another loop, we call that a *nested loop*. One use for a nested `for` loop is to compare the elements in two arrays. For each round of the outer `for` loop, the inner `for` loop will run completly.
 
-```
+```js
 let bobsFollowers = ['Daniel', 'Juan', 'Mateo', 'Luis'];
 
 let tinasFollowers = ['Juan', 'Mateo', 'Maria'];
@@ -110,7 +110,7 @@ console.log(mutualFollowers);
 
 ## The While Loop
 Let's convert a `for` loop into a `while` loop:
-```
+```js
 // A for loop that prints 1, 2 and 3
 for (let counterOne = 1; counterOne < 4; counterOne++) {
   console.log(counterOne);

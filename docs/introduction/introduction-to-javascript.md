@@ -25,13 +25,13 @@ Comments can explain what the code is doing, leave instructions for developers u
 
 1. A *single line comment* will comment out a single line and is denoted with two forward slashes `//` preceding it.
 
-  ```
+  ```js
   // this is prints Hello World
   console.log('Hello World);
   ```
 2. A *multi-line comment* will comment out multiple lines and is denoted with `/*`to begin the comment, and `*/` to end the comment.
 
-  ```
+  ```js
   /* 
   This block
   is a comment.
@@ -67,7 +67,7 @@ The remainder operator, sometimes called *modulo*, returns the number that remai
 ## String Concatenation
 The process of appending one string to another is called *concatenation*.
 The computer will join the strings exactly, so we needed to make sure to include the space we wanted between the two strings.
-  ```
+  ```js
   console.log('I love to ' + 'code.');  // Prints 'I love to code.'
   console.log('front ' + 'space');      // Prints 'front space';
   console.log('middle' + ' ' + 'space'); // Prints 'middle space'
@@ -88,7 +88,7 @@ We *call*, or use, these methods by appending an instance with period(the dot op
 
 When we use `console.log()` we're calling the `.log()` method on the `console`object.
 
-  ```
+  ```js
   console.log('hello'.toUpperCase()); // Prints 'HELLO'
   console.log('Hey'.startsWith('H')); // Prints true
   console.log('   Remove whitespaces    '); // Prints 'Remove whitespaces'
@@ -103,13 +103,13 @@ For example, if you wanted to perform more complex mathematical operations that 
 
 The great thing about objects is that they have methods. In the next example we call the `.random()` method from the built-in Math object:
 
-  ```
+  ```js
   console.log(Math.random());
   // Prints a random number between 0 and 1
   ```
 To generate a random number between 0 and 50, we could multiply this result by 50, like so:
 
-  ```
+  ```js
   console.log(Math.random() * 50);
   // Prints a random number between 0 and 50
   ```
@@ -117,21 +117,21 @@ To ensure the answer is a whole number, we can take advantage of another useful 
 
 `Math.floor()` takes a decimal number, and rounds down to the nearest whole number.
 
-```
+```js
 console.log(Math.floor(Math.random() * 50));
 // Prints a integer number between 0 and 50
 ```
 
 Use the `.ceil()` method to calculate the smallest integer greater than or equal to `43.8`.
 
-```
+```js
 console.log(Math.ceil(43.8));
 // Prints 44
 ```
 
 Use the `isInteger()` method from the `Number` object to check if `2017` is an integer.
 
-```
+```js
 console.log(Number.isInteger(34.2));
 // Prints false
 ```

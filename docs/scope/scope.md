@@ -17,7 +17,7 @@ A block is the code found inside a set of curly braces `{}`. Block help us group
 
 Blocks difine the scope of variables.
 
-```
+```js
 const city = 'New York City';
 
 const logCitySkyline = () => {
@@ -34,7 +34,7 @@ console.log(logCitySkyline()) // Prints The stars over the Empire State Building
 In *global scope*, variables are declared outside of block. These variables are called *global variables*. Because global variables are not bound inside a block, they can be accessed by any code in the program, including code in blocks.
 
 Example of global scope:
-```
+```js
 const color = 'blue';
 
 const returnSkyColor = () => {
@@ -50,7 +50,7 @@ When a variable is definied inside a block, it is only accessible to the code wi
 Variables that are declared with block scope are known as *local variables*.
 
 Block scope example:
-```
+```js
 const logSkyColor = () => {
   let color = 'blue';
   console.log(color); //blue
@@ -65,7 +65,7 @@ console.log(color); //ReferenceError
 For example, globally scoped variables can collide with other variables that are more locally scoped, causing unexpected behavior in our code.
 
 Example of scope pollution in practice:
-```
+```js
 let num = 50;
 
 const logNum = () => {

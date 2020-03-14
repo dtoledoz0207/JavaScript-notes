@@ -39,7 +39,7 @@ There are a few general rules for naming variables:
 ## Create a Variable: let
 The `let` keyword signals that the variable can be reassigned a different value.
 
-  ```
+  ```js
   let meal = 'Tacos';
   console.log(meal); // Prints 'Tacos'
   meal = 'Pizza';
@@ -47,7 +47,7 @@ The `let` keyword signals that the variable can be reassigned a different value.
   ```
 When we use `let` and even `var`, we can declare a variable without assigning the variable a value. In such a case, the variable will be automatically initialized with a value of `undefined`.
 
-  ```
+  ```js
   let price;
   console.log(price); // Prints undefined
   price = 350;
@@ -65,7 +65,7 @@ Constant variables *must* be assigned a value when declared. If you try to decla
 
 ## Mathematical Assignment Operators
 
-```
+```js
 let w = 4;
 w += 1;
 
@@ -75,7 +75,7 @@ We're performing the mathematical operation of the first operator `+` using the 
 
 We also have access to other mathematical assignment operators: `-=`, `*=`, and `/=`.
 
-```
+```js
 let x = 20;
 x -= 5; // Can be written as x = x - 5
 console.log(x); // Output: 15
@@ -94,7 +94,7 @@ Other mathematical assignment operators include the *increment operator* (`++`) 
 
 The increment operator will increase the value of the variable by 1. The decrement operator will decrease the value of the variable by 1. For example:
 
-```
+```js
 let a = 10;
 a++;
 console.log(a); // Output: 11
@@ -111,7 +111,7 @@ Now, let’s go over how to connect, or concatenate, strings in variables.
 
 The `+` operator can be used to combine two string values even if those values are being stored in variables:
 
-```
+```js
 let myPet = 'armadillo';
 console.log('I own a pet ' + myPet + '.');
 // Output: 'I own a pet armadillo.'
@@ -120,8 +120,8 @@ console.log('I own a pet ' + myPet + '.');
 ## String Interpolation
 In the ES6 version of JavaScript, we can insert, or *interpolate*, variables into strings using *template literals*.
 
-```
-let myPet = 'armadillo;
+```js
+let myPet = 'armadillo';
 console.log(`I own pet ${myPet}`);
 // Output: I own pet armadillo
 ```
@@ -135,7 +135,7 @@ Notice that:
 ## typeof operator
 If you need to check the data type of a variable's value, you can use the `typeof` operator.
 
-```
+```js
 const unknown1 = 'foo';
 console.log(typeof unknown1); // Output: string
 

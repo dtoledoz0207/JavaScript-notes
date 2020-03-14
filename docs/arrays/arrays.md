@@ -18,7 +18,7 @@ Arrays are JavaScript's way to making lists. Arrays can store any data types (in
 
 Example of array:
 
-```
+```js
 let concepts = ['creating arrays', 'array structures', 'array manipulation']
 ```
 
@@ -31,7 +31,7 @@ Arrays can store any data type, we can have an array that holds all the same dat
 
 We can also save an array to a variable.
 
-```
+```js
 let newYearsResolutions = ['Keep a journal', 'Take a falconry class', 'Learn to juggle'];
 ```
 
@@ -42,7 +42,7 @@ Arrays in JavaScript are *zero-indexed*, meaning the positions start counting fr
 
 You can also access individual characters in a string using bracket notation and the index. For instance:
 
-```
+```js
 const hello = 'Hello World';
 console.log(hello[6]);
 // Ouput: W
@@ -51,7 +51,7 @@ console.log(hello[6]);
 ## Update Elements
 Once you have access to an element in an array, you can update its value.
 
-```
+```js
 let seasons = ['Winter', 'Sprint', 'Summer', 'Fall'];
 seasons[3] = 'Autumn';
 console.log(seasons);
@@ -68,7 +68,7 @@ However, elements in array declared with `const` remain mutable. Meaning that we
 ## The .length property
 One of an array's built-in properties is `length` and it returns the number of items in the array.
 
-```
+```js
 const newYearsResolutions = ['Keep a journal', 'Take a falconry class'];
 
 console.log(newYearsResolutions.length);
@@ -78,7 +78,7 @@ console.log(newYearsResolutions.length);
 ## The .push() Method
 `.push()` is a built-in JavaScript method that allows us to add items to the end of an array.
 
-```
+```js
 const itemTracker = ['item 0', 'item 1', 'item 2'];
 itemTracker.push('item 3', 'item 4');
 
@@ -91,7 +91,7 @@ console.log(itemTracker);
 ## The .pop() Method
 Another array method, `.pop()`, removes the last item of an array.
 
-```
+```js
 const newItemTracker = ['item 0', 'item 1', 'item 2'];
 
 const removed = newItemTracker.pop();
@@ -114,7 +114,7 @@ Some arrays methods that are available to JavaScript developers include: `.join(
 Below, we will explore some methods that we have not learned yet.
 
 1. Use the `.shift()` method to remove the first item from the array `groceryList`.
-```
+```js
 const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
 
 groceryList.shift();
@@ -123,7 +123,7 @@ console.log(groceryList);
 ```
 
 2. Use the `.unshift()` method to add `'popcorn'` to the beginning of the grocery list.
-```
+```js
 groceryList.unshift('popcorn');
 console.log(groceryList);
 
@@ -131,14 +131,14 @@ console.log(groceryList);
 ```
 
 3. If you want to get `'bananas'`, `'coffe beans'` and `'brown rice'` from the grocery list. You can use `.slice()` to get a list of these three things.
-```
+```js
 console.log(groceryList.slice(1, 4));
 // Output: ['bananas', 'coffee beans', 'brown rice'];
 ```
 + `.slice()` is non-mutating, that mean that this method does not change the original array.
 
 4. If you want to get the index of a particular element in an array, you can use `.indexOf()` method.
-```
+```js
 const pastaIndex = groceryList.indexOf('pasta');
 console.log(pastaIndex);
 // Output: 4
@@ -149,7 +149,7 @@ Throughout the lesson we went over arrays being mutable, or changeable. Well wha
 
 Take a look at the following example where we call `.push()` on an array inside a function. Recall, the `.push()` method mutates, or changes, an array:
 
-```
+```js
 const flowers = ['peony', 'daffodil', 'marigold'];
 
 function addFlower(arr) {
@@ -173,7 +173,7 @@ When an array contains another array it is known as a *nested array*.
 
 To access the nested arrays we can use backet notation with the index value.
 
-```
+```js
 const nestedArr = [[1], [2, 3]];
 console.log(nestedArr[1]);
 // Output: [2, 3]
@@ -181,7 +181,7 @@ console.log(nestedArr[1]);
 
 Then, if we wanted to access the elements within the nested array we can *chain*, or add on, more bracket notation with index values.
 
-```
+```js
 const nestedArr = [[1], [2, 3]];
 
 console.log(nestedArr[1]); // Output: [2, 3]

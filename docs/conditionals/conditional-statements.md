@@ -29,7 +29,7 @@ In this lesson we'll be covering the following concepts:
 ## The if keyword
 In programming, we can also perform a task based on a condition using an `if` statement:
 
-```
+```js
 if (true) {
   console.log('This message will print!');
 }
@@ -46,7 +46,7 @@ The `if` statement is composed of:
 ## If...Else Statements
 If we wanted to add some default behavior to the `if` statement, we can add an `else` statement to run a block of code when the condition evaluates to `false`.
 
-```
+```js
 if (false) {
   console.log('The code in this block will not run');
 } else {
@@ -84,7 +84,7 @@ Working with conditionals means that we will be using booleans, `true` or `false
 When using the `&&` operator, both conditions *must* evaluate to `true` for the entire condition to evaluate to `true` and execute.
 Otherwise, if either condition is `false`, the `&&` condition will evaluate to `false` and the `else` block will execute.
 
-```
+```js
 if (stopLight === 'green' && pedestrians === 0) {
   console.log('Go!');
 } else {
@@ -95,7 +95,7 @@ if (stopLight === 'green' && pedestrians === 0) {
 When using the `||` operator, only one of the conditions must evaluate to `true` for the overall statement to evaluate to `true`.
 If the first condition in an `||` statement evaluates to `true`, the second condition won't even be checked. Only if the first condition evaluates to `false`, the second one will be evaluated.
 
-```
+```js
 if (day === 'Saturday' || day === 'Sunday') {
   console.log('Enjoy the weekend!');
 } else {
@@ -105,7 +105,7 @@ if (day === 'Saturday' || day === 'Sunday') {
 
 The `!` *not operator* reverses, or *negates*, the value of a boolean:
 
-```
+```js
 let excited = true;
 console.log(!excited); // Prints false
 
@@ -116,7 +116,7 @@ console.log(!sleepy); // Prints true
 ## Truthy and Falsy
 Somethimes, you'll want to check if a variable exists and you won't necessary want it to equal a specific value. You'll only check to see if the variable has been assigned a value.
 
-```
+```js
 let myVariable = 'I Exists!';
 if (myVariable) {
   console.log(myVariable);
@@ -135,7 +135,7 @@ So which values are *falsy* or evaluate to `false` when checked as a condition? 
 * `undefined` which represent when a declared variable lacks a value
 * `NaN`, or Not a Number
 
-```
+```js
 let numberOfApples = 0;
 if (numberOfApples) {
   console.log('Let us eat apples!');
@@ -158,7 +158,7 @@ We can use a *ternary operator* to simplify an `if...else` statement.
 
 Take a look at the `if...else` statement example:
 
-```
+```js
 let isNightTime = true;
 
 if (isNightTime) {
@@ -170,7 +170,7 @@ if (isNightTime) {
 
 We can use a *ternary operator* to perform the same functionality:
 
-```
+```js
 isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');
 ```
 
@@ -186,7 +186,7 @@ We can add more conditions to our `if...else` with an `else if` statement. The `
 
 The `else if` statement always comes after the `if` statement and before the `else` statement. The `else if` statement also takes a condition.
 
-```
+```js
 let stopLight = 'yellow';
 
 if (stopLight === 'red') {
@@ -205,7 +205,7 @@ The `else if` statement allows you to have multiple possible outcomes. `if`/`els
 ## The switch keyword
 A switch statement provides an alternative syntax that is easier to read and write.
 
-```
+```js
 let groceryItem = 'papaya';
 
 switch (groceryItem) {
