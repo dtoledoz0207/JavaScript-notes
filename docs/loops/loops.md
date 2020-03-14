@@ -2,6 +2,7 @@
 
 * [Loops](#Loops)
 * [The For Loop](#The-For-Loop)
+* [Looping in Reverse](#Looping-in-Reverse)
 
 
 ## Loops
@@ -40,3 +41,24 @@ Output:
 + The initialization is `let counter = 0`.
 + The stopping condition is `counter < 4`.
 + The iteration statement is `counter++`.
+
+## Looping in Reverse
+To run a backward `for` loop, we must:
++ Set the iterator variable to the highest desired value in the initialization expression.
++ Set the stopping condition for when the iterator variable is less than the desired amount.
++ The iterator should decrease in intervals after each iteration.
+
+Loop in reverse:
+```
+for (let counter = 3); counter >= 0; counter--) {
+  console.log(counter);
+}
+```
+
+Output:
+```
+3
+2
+1
+0
+```
