@@ -4,6 +4,7 @@
 * [The For Loop](#The-For-Loop)
 * [Looping in Reverse](#Looping-in-Reverse)
 * [Looping through Arrays](#Looping-through-Arrays)
+* [Nested Loops](#Nested-Loops)
 
 
 ## Loops
@@ -83,3 +84,25 @@ Turtle
 When we use `i` to iterate through arrays we can think of it as being short-hand for the word **i**ndex.
 
 Notice how our stopping condition checks that `i` is less than `animals.length`. Remember that arrays ere zero-indexed, the index of the last element of an array is equivalent to the length of that array minus 1.
+
+## Nested Loops
+When we have a loop running inside another loop, we call that a *nested loop*. One use for a nested `for` loop is to compare the elements in two arrays. For each round of the outer `for` loop, the inner `for` loop will run completly.
+
+```
+let bobsFollowers = ['Daniel', 'Juan', 'Mateo', 'Luis'];
+
+let tinasFollowers = ['Juan', 'Mateo', 'Maria'];
+
+let mutualFollowers = [];
+
+for (let i = 0; i < bobsFollowers.length; i++) {
+  for (let j = 0; j < tinasFollowers.length; j++) {
+    if (bobsFollowers[i] === tinasFollowers[j]) {
+      mutualFollowers.push(tinasFollowers[j]);
+    }
+  }
+}
+
+console.log(mutualFollowers);
+// Output: ['Juan', 'Mateo']
+```
