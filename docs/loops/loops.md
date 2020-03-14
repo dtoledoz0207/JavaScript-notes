@@ -6,6 +6,7 @@
 * [Looping through Arrays](#Looping-through-Arrays)
 * [Nested Loops](#Nested-Loops)
 * [The While Loop](#The-While-Loop)
+* [Do...While Statements](#Do...While-Statements)
 
 
 ## Loops
@@ -133,3 +134,40 @@ If we didn't increment `counterTwo` inside our block, `counterTwo` would always 
 + __The syntax of a `for` loop is ideal when we know how many times the loop should run.__
 
 + **When we want a loop to execute an undetermined number of times, `while` loops are the best choice.**
+
+
+## Do...While Statements
+In some cases, you want a piece of code to run at least once and then loop based on a specific condition after its initial run. This is where the `do...while` statement comes in.
+
+A `do...while` statement says to do a task once and then keep doing it until a specified condition is no longer met.
+
+The syntax for a `do...while` statement looks like this:
+
+```js
+let countString = '';
+let i = 0;
+
+do {
+  countString = countString + 1;
+  i++;
+} while (i < 5);
+
+console.log(countString);
+// Output: '01234'
+```
+First, the code block after the `do` keyword is executed once. Then the condition is evaluated. If the condition evaluates to `true`, the block will execute again. The looping stops when the condition evaluates to `false`.
+
+```js
+const firstMessage = 'I will print!';
+const secondMessage = 'I will not print!';
+
+// A do while with a stopping condition that evaluates to false
+do {
+  console.log(firstMessage);
+} while (true === false);
+
+// A while loop with a stopping condition that evaluates to false
+while (true === false) {
+  console.log(secondMessage);
+}
+```
