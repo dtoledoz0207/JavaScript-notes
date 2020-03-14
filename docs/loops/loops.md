@@ -5,6 +5,7 @@
 * [Looping in Reverse](#Looping-in-Reverse)
 * [Looping through Arrays](#Looping-through-Arrays)
 * [Nested Loops](#Nested-Loops)
+* [The While Loop](#The-While-Loop)
 
 
 ## Loops
@@ -106,3 +107,29 @@ for (let i = 0; i < bobsFollowers.length; i++) {
 console.log(mutualFollowers);
 // Output: ['Juan', 'Mateo']
 ```
+
+## The While Loop
+Let's convert a `for` loop into a `while` loop:
+```
+// A for loop that prints 1, 2 and 3
+for (let counterOne = 1; counterOne < 4; counterOne++) {
+  console.log(counterOne);
+}
+
+// A while loop that prints 1, 2 and 3
+let counterTwo = 1;
+while(counterTwo < 4) {
+  console.log(counterTwo);
+  counterTwo++;
+}
+```
+
++ The `counterTwo` variable is declared before the loop. We can access it inside our while loop since it's in the global scope.
++ We start out loop with the keyword `while` followed by our stopping condition, or *test condition*. This will be evaluated before each round of the loop. While the condition evaluates to `true`, the block will continue to run. Once it evaluates to `false` the loop will stop.
++ Next, we have our loop's code block which prints `counterTwo` to the console and increments `counterTwo`.
+
+If we didn't increment `counterTwo` inside our block, `counterTwo` would always have its initial value, `1`. That would mean the testing condition `counterTwo < 4` would always evaluate to `true` and our loop would never stop running. This is called an *infinite loop* and it's something we always want to **avoid**.
+
++ __The syntax of a `for` loop is ideal when we know how many times the loop should run.__
+
++ **When we want a loop to execute an undetermined number of times, `while` loops are the best choice.**
