@@ -7,6 +7,7 @@
 * [Nested Loops](#Nested-Loops)
 * [The While Loop](#The-While-Loop)
 * [Do...While Statements](#Do...While-Statements)
+* [The break Keyword](#The-break-Keyword)
 
 
 ## Loops
@@ -171,3 +172,28 @@ while (true === false) {
   console.log(secondMessage);
 }
 ```
+
+## The break Keyword
+When we want to stop a loop from continuing to execute even though the original stopping condition we wrote for our loop hasn't been met, we can use the keyword `break`.
+
+The `break` keyword allows programs to "break" out of the loop from within the loop's block.
+
+```js
+for (let i = 0; i < 99; i++) {
+  if (i > 2) {
+    break;
+  }
+  console.log('Banana.');
+}
+
+console.log('Orange you glad I broke out the loop!');
+```
+Output:
+```js
+Banana.
+Banana.
+Banana.
+Orange you glad I broke out the loop!
+```
+
+`break` statements can be especially helpful when we're looping through large data structures!. With breaks, we can add test conditions besides the stopping condition, and exit the loop when they're met.
