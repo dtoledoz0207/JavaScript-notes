@@ -3,6 +3,7 @@
 * [Loops](#Loops)
 * [The For Loop](#The-For-Loop)
 * [Looping in Reverse](#Looping-in-Reverse)
+* [Looping through Arrays](#Looping-through-Arrays)
 
 
 ## Loops
@@ -62,3 +63,23 @@ Output:
 1
 0
 ```
+
+## Looping through Arrays
+To loop through each element in an array, a `for` loop should use the array's `.length` property in its condition.
+
+`for` loops iterate on arrays:
+```
+const animals = ['Dog', 'Cat', 'Turtle'];
+for (let i = 0; i < animals.length; i++) {
+  console.log(animals[i]);
+}
+```
+Output:
+```
+Dog
+Cat
+Turtle
+```
+When we use `i` to iterate through arrays we can think of it as being short-hand for the word **i**ndex.
+
+Notice how our stopping condition checks that `i` is less than `animals.length`. Remember that arrays ere zero-indexed, the index of the last element of an array is equivalent to the length of that array minus 1.
