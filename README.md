@@ -14,4 +14,5 @@
 - Loops
   * [Loops](docs/loops/loops.md)
 - Iterators
- * [Higher-Order Functions](docs/iterators/higher-order-functions.md)
+  * [Higher-Order Functions](docs/iterators/higher-order-functions.md)
+  * [Iterators](docs/iterators/iterators.md)
