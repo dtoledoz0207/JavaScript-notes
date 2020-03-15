@@ -5,6 +5,7 @@
 * [The .map() Method](#The-.map()-Method)
 * [The .filter() Method](#The-.filter()-Method)
 * [The .findIndex() Method](#The-.findIndex()-Method)
+* [The .reduce() Method](#The-.reduce()-Method)
 
 
 ## Introduction to Iterators
@@ -121,3 +122,48 @@ const greaterThan1000 = jumbledNums.findIndex(num => {
 
 console.log(greaterThan1000); // Output: -1
 ```
+
+## The .reduce() Method
+The `.reduce()` method returns a single value after iterating through the elements of an array, thereby *reducing* the array.
+
+```js
+const numbers = [1, 2, 4, 10];
+
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+});
+
+console.log(summedNums); // Output: 17
+```
+
+Here are the values of `accumulator` and `currentValue` as we iterate through the `numbers` array:
+
+| Iteration | `accumulator` | `currentValue` | return value |
+| -- | -- | -- | -- |
+| First | 1 | 2 | 3 |
+| Second | 3 | 4 | 7 |
+| Third | 7 | 10 | 17 |
+
++ `summedNums` is a variable that stores the returned value of invoking `.reduce()` on `numbers`.
++ `numbers.reduce()` calls the `.reduce()` method on the `numbers` array and takes in a callback function as argument.
++ The callback function has two parameters, `accumulator` and `currenValue`. The value of `accumulator` starts off as the value of the first element in the array and the `currentValue` starts as the second element.
++ As `.reduce()` iterates through the array, the return value of the callback function becomes the `accumulator` value for the next iteration, `currentValue` takes on the value of the current element in the looping process.
+
+The `.reduce()` method can also take an optional second parameter to set an initial value for `accumulator` (remember, the first argument is the callback function).
+
+```js
+const numbers = [1, 2, 4, 10];
+
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+}, 100)  // <- Second argument for .reduce()
+
+console.log(summedNums); // Output: 117
+```
+
+| Iteration | `accumulator` | `currentValue` | return value |
+| -- | -- | -- | -- |
+| First | 100 | 1 | 101 |
+| Second | 101 | 2 | 103 |
+| Third | 103 | 4 | 107 |
+| Fourth | 107 | 10 | 117 |
