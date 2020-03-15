@@ -13,3 +13,5 @@
   * [Arrays](docs/arrays/arrays.md)
 - Loops
   * [Loops](docs/loops/loops.md)
+- Iterators
+ * [Higher-Order Functions](docs/iterators/higher-order-functions.md)
