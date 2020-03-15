@@ -2,6 +2,7 @@
 
 * [Introduction to Iterators](#Introduction-to-Iterators)
 * [The .forEach() Method](#The-.forEach()-Method)
+* [The .map() Method](#The-.map()-Method)
 
 
 ## Introduction to Iterators
@@ -49,3 +50,23 @@ I want to eat a papaya
 I want to eat a pineapple
 I want to eat a apple
 ```
+
+## The .map() Method
+When `.mao()` is called on an array, it takes an argument of a callback function and returns a new array.
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+
+const bigNumbers = numbers.map(number => {
+  return number * 10;
+});
+
+console.log(numbers); // Output: [1, 2, 3, 4, 5]
+console.log(bigNumbers); // Output: [10, 20, 30, 40, 50]
+```
+
+`.map()` returns a new array.
+
++ `bigNumbers` will store the return value of calling `.map()` on `numbers`.
++ `numbers.map` will iterate through each element in the `numbers` array and pass the element into the callback function.
++ `return number * 10` is the code we wish to execute upon each element in the array. This will save each value from the `numbers` array, multiplied by `10`, to a new array.
