@@ -3,6 +3,7 @@
 * [Introduction to Iterators](#Introduction-to-Iterators)
 * [The .forEach() Method](#The-.forEach()-Method)
 * [The .map() Method](#The-.map()-Method)
+* [The .filter() Method](#The-.filter()-Method)
 
 
 ## Introduction to Iterators
@@ -70,3 +71,24 @@ console.log(bigNumbers); // Output: [10, 20, 30, 40, 50]
 + `bigNumbers` will store the return value of calling `.map()` on `numbers`.
 + `numbers.map` will iterate through each element in the `numbers` array and pass the element into the callback function.
 + `return number * 10` is the code we wish to execute upon each element in the array. This will save each value from the `numbers` array, multiplied by `10`, to a new array.
+
+## The .filter() Method
+Like `.map()`, `.filter()` returns a new array. However, `.filter()` returns an arrays of elements after filtering out certain elements from the original array.
+
+The callback function for the `.filter()` method should return `true` or `false` depending on the element that is passed to it. The elements that cause the callback function to return `true` are to the new array.
+
+```js
+const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door'];
+
+const shortWords = words.filter(word => {
+  return word.length < 6;
+});
+
+console.log(words); // Output: ['chair', 'music', 'pillow', 'brick', 'pen', 'door']
+console.log(shortWords); // Output: ['chair', 'music', 'brick', 'pen', 'door']
+```
+
++ `const shortWords =` declares a new variable that will store the returned array from invoking `.filter()`.
++ The callback function is an arrow function has a single parameter, `word`. Each element in the `words` array will be passed to this function as an argument.
++ `world.length < 6;` is the condition in the callback function. Any `word` from the `words` array thas has fewer than `6` characters will be added to the `shortWords` array.
+
