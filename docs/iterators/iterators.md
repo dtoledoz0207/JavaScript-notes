@@ -6,6 +6,7 @@
 * [The .filter() Method](#The-.filter()-Method)
 * [The .findIndex() Method](#The-.findIndex()-Method)
 * [The .reduce() Method](#The-.reduce()-Method)
+* [Iterator Documentation](#Iterator-Documentation)
 
 
 ## Introduction to Iterators
@@ -167,3 +168,18 @@ console.log(summedNums); // Output: 117
 | Second | 101 | 2 | 103 |
 | Third | 103 | 4 | 107 |
 | Fourth | 107 | 10 | 117 |
+
+
+## Iterator Documentation
+There are many additional built-in array methods, a complete list of which is on the [MDN's Array iteration methods page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods)
+
+The documentation for each method contains several sections:
+
+1. A short definition.
+2. A block with the correct syntax for using the method.
+3. A list of parameters the method accepts or requires.
+4. The return value of the function.
+5. An extended description.
+6. Examples of the method's use.
+7. Other additional information.
+
