@@ -3,6 +3,7 @@
 * [Introduction to Objects](#Introduction-to-Objects)
 * [Creating Object Literals](#Creating-Object-Literals)
 * [Accessing Properties](#Accessing-Properties)
+* [Bracket Notation](#Bracket-Notation)
 
 
 ## Introduction to Objects
@@ -48,4 +49,33 @@ If we try to access a property that does not exist on that object, `undefined` w
 
 ```js
 spaceship.favoriteIcecream; // Returns undefined
+```
+
+## Bracket Notation
+The second way to access a key's value is by using bracket notation `[ ]`.
+
+To use bracket notation to access an object's property, we pass in the property name (key) as a string.
+
+We **must** use brackets notation when accessing key that have numbers, spaces, or special characters in them. Without bracket notation in these situations, our code would throw an error.
+
+```js
+let spaceship = {
+  'Fuel Type': 'Turbo Fuel',
+  'Active Duty': true,
+  homePlanet: 'Earth',
+  numCrew: 5
+};
+
+spaceship['Active Duty']; // Returns true
+spaceship['Fuel Type']; // Returns 'Turbo Fuel'
+spaceship['numCrew']; // Returns 5
+spaceship['!!!!!!!!!'] // Returns undefined
+```
+
+With bracket notation we can also use a variable inside the brackets to select the keys of an object. This can be especially helpful when working with functions:
+
+```js
+let returnAnyProp = (objectName, propName) => objectName[propName];
+
+returnAnyProp(spaceship, 'homePlanet'); // Returns 'Earth'
 ```
