@@ -5,6 +5,7 @@
 * [Accessing Properties](#Accessing-Properties)
 * [Bracket Notation](#Bracket-Notation)
 * [Property Assignment](#Property-Assignment)
+* [Methods](#Methods)
 
 
 ## Introduction to Objects
@@ -117,4 +118,32 @@ const spaceship = {
 };
 
 delete spaceship.mission; // Removes the mission property
+```
+
+## Methods
+When the data stored on an object is a function we call that a *method*. A property is what an object  has, while a method is what an object does.
+
+We can include methods in our object literals by creating ordinary, comma-separated key-values pairs. The key serves as our method's name, while the value is an anonymous function expression.
+
+```js
+const alienShip = {
+  invade: function () {
+    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+  }
+};
+```
+
+With the new method syntax introduced in ES6 we can omit the colon and the `function` keyword.
+
+```js
+const alienShip = {
+  invade() {
+    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+  }
+};
+```
+
+Example how to invoke an Object method:
+```js
+alienShip.invade(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
 ```
