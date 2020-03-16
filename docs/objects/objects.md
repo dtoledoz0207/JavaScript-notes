@@ -2,6 +2,7 @@
 
 * [Introduction to Objects](#Introduction-to-Objects)
 * [Creating Object Literals](#Creating-Object-Literals)
+* [Accessing Properties](#Accessing-Properties)
 
 
 ## Introduction to Objects
@@ -31,3 +32,20 @@ let spaceship = {
 
 The `spaceship` object has two properties `Fuel Type` and `color`. `Fuel Type` has quotation marks because it contains a space character.
 
+## Accessing Properties
+There are two ways we can access an object's property. The first way is - dot notation, `.`.
+
+```js
+let spaceship = {
+  homePlanet: 'Earth',
+  color: 'silver'
+};
+spaceship.homePlanet; // Returns 'Earth'
+spaceship.color; // Returns 'silver'
+```
+
+If we try to access a property that does not exist on that object, `undefined` will returned.
+
+```js
+spaceship.favoriteIcecream; // Returns undefined
+```
