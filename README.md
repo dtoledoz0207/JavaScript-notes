@@ -16,3 +16,5 @@
 - Iterators
   * [Higher-Order Functions](docs/iterators/higher-order-functions.md)
   * [Iterators](docs/iterators/iterators.md)
+- Objects
+  * [Objects](docs/objects/objects.md)
