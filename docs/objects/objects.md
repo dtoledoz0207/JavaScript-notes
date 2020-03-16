@@ -7,6 +7,7 @@
 * [Property Assignment](#Property-Assignment)
 * [Methods](#Methods)
 * [Nested Objects](#Nested-Objects)
+* [Pass By Reference](#Pass-By-Reference)
 
 
 ## Introduction to Objects
@@ -190,3 +191,45 @@ const firstPassenger = spaceship.passengers[0];
 
 console.log(firstPassenger); // Prints { name: 'David' }
 ```
+
+## Pass By Reference
+Objects are *passed by reference.* This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in memory holding that object.
+
+```js
+const spaceship = {
+  homePlanet : 'Earth',
+  color : 'silver'
+};
+
+let paintIt = obj => {
+  obj.color =  'glorious gold'
+};
+
+paintIt(spaceship);
+spaceship.color // Returns 'glorious gold'
+```
+
+However, reassignment of the `spaceship` variable wouldn't work in the same way:
+
+```js
+let spaceship = {
+  homePlanet : 'Earth',
+  color : 'red'
+};
+let tryReassignment = obj => {
+  obj = {
+    identified : false, 
+    'transport type' : 'flying'
+  }
+  console.log(obj) // Prints {'identified': false, 'transport type': 'flying'}
+
+};
+tryReassignment(spaceship) // The attempt at reassignment does not work.
+spaceship // Still returns {homePlanet : 'Earth', color : 'red'};
+
+spaceship = {
+  identified : false, 
+  'transport type': 'flying'
+}; // Regular reassignment still works.
+```
++ When we passed `spaceship` into that function, `obj` became a reference to the memory location of the `spaceship` object, but *not* to the spaceship variable. This is because the `obj` parameter of the `tryReassignment()` function is a variable in its own right. The body of `tryReassignment()` has no knowledge of the `spaceship` variable at all.
