@@ -6,6 +6,7 @@
 * [Bracket Notation](#Bracket-Notation)
 * [Property Assignment](#Property-Assignment)
 * [Methods](#Methods)
+* [Nested Objects](#Nested-Objects)
 
 
 ## Introduction to Objects
@@ -146,4 +147,46 @@ const alienShip = {
 Example how to invoke an Object method:
 ```js
 alienShip.invade(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
+```
+
+## Nested Objects
+An object might have another object as a property which is turn could have a property that's an array of even more objects.
+
+```js
+let spaceship = {
+  passengers: null,
+  telescope: {
+    yearBuilt: 2018,
+    model: "91031-XLT",
+    focalLength: 2032 
+  },
+  crew: {
+    captain: { 
+      name: 'Sandra', 
+      degree: 'Computer Engineering', 
+      encourageTeam() { console.log('We got this!') },
+     'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
+  },
+  engine: {
+    model: "Nimbus2000"
+  },
+  nanoelectronics: {
+    computer: {
+      terabytes: 100,
+      monitors: "HD"
+    },
+    'back-up': {
+      battery: "Lithium",
+      terabytes: 50
+    }
+  }
+}; 
+
+const capFave = spaceship.crew.captain['favorite foods'][0];
+
+spaceship.passengers = [{name: 'David'}, {name: 'Pedro'}];
+
+const firstPassenger = spaceship.passengers[0];
+
+console.log(firstPassenger); // Prints { name: 'David' }
 ```
