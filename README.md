@@ -18,3 +18,4 @@
   * [Iterators](docs/iterators/iterators.md)
 - Objects
   * [Objects](docs/objects/objects.md)
+  * [Advanced Objects](docs/objects/advanced-objects.md)
