@@ -1,6 +1,7 @@
 # Advanced Objects
 
 * [The this Keyword](#The-this-Keyword)
+* [Arrow Functions and this](#Arrow-Functions-and-this)
 
 
 ## The this Keyword
@@ -43,3 +44,24 @@ goat.diet();
 ```
 
 The `this` keyword references the *calling object* which provides access to the calling object's properties. In the example above, the calling object is `goat` and by using `this` we're accessing the `goat` object itself, and then the `dietType` property of `goat` by using property dot notation.
+
+## Arrow Functions and this
+There is a problem with `this` when we start using arrow functions for methods.
+
+```js
+const goat = {
+    dietType: 'herbivore',
+    makeSound() {
+        console.log('baaa');
+    },
+    diet: () => {
+        console.log(this.dietType);
+    }
+};
+
+goat.diet(); // Prints undefined
+```
+
+Arrow functions inherently *bind*, or tie, an already defined `this` value to the function itself is NOT the calling object. In the example above, the value of `this` is the *global object*, or an object that exist in the global scope, which doesn't have a `dietType` property and therefore returns `undefined`.
+
+The key takeaway from the example above is to *avoid* using arrow functions when using `this` in a method.
