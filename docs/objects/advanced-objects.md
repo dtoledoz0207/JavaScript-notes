@@ -3,6 +3,7 @@
 * [The this Keyword](#The-this-Keyword)
 * [Arrow Functions and this](#Arrow-Functions-and-this)
 * [Privacy](#Privacy)
+* [Getters](#Getters)
 
 
 ## The this Keyword
@@ -88,3 +89,30 @@ bankAccount._amount = 1000000;
 ```
 
 There are some method to do that, called *getters* and *setters*. Getters can return the value of internal properties and setters can safely reassing property values.
+
+## Getters
+*Getters* are methods that get and return the internal properties of an object.
+
+```js
+const person = {
+    _firstName: 'John',
+    _lastName: 'Doe',
+    get fullName() {
+        if (this._firstName && this._lastName) {
+            return `${this._firstName} ${this._lastName}`;
+        } else {
+            return 'Missing a first name or a last name.';
+        }
+    }
+};
+
+// To call the getter method:
+person.fullName; // 'John Doe'
+```
+
++ We use the `get` keyword followed by a function.
++ We use an `if...else` conditional to check if both `_firstName` and `_lastName` exist and then return a different value depending on the result.
++ We can access the calling object's internal properties using `this`.
++ In the last line we call `fullName` on person. In general, getter methods do not need to be called with a set of parentheses. Syntactically, it looks like we're accessing a property.
+
+Another thing to keep in mind when using getter (and setter) methods is that properties cannot share the same name as the getter/setter function. If we do so, then calling the method will result in an infinite call stack error.
