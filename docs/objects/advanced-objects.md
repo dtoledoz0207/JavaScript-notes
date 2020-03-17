@@ -4,6 +4,7 @@
 * [Arrow Functions and this](#Arrow-Functions-and-this)
 * [Privacy](#Privacy)
 * [Getters](#Getters)
+* [Setters](#Setters)
 
 
 ## The this Keyword
@@ -116,3 +117,37 @@ person.fullName; // 'John Doe'
 + In the last line we call `fullName` on person. In general, getter methods do not need to be called with a set of parentheses. Syntactically, it looks like we're accessing a property.
 
 Another thing to keep in mind when using getter (and setter) methods is that properties cannot share the same name as the getter/setter function. If we do so, then calling the method will result in an infinite call stack error.
+
+## Setters
+We can also create *setter* methods which reassing values of existing properties within an object.
+
+```js
+const robot = {
+  _model: '1E78V2',
+  _energyLevel: 100,
+  _numOfSensors: 15,
+  get numOfSensors(){
+    if(typeof this._numOfSensors === 'number'){
+      return this._numOfSensors;
+    } else {
+      return 'Sensors are currently down.'
+    }
+  },
+  set numOfSensors(num) {
+    if (typeof num === 'number' && num >= 0) {
+      this._numOfSensors = num;
+    } else {
+      console.log('Pass in a number that is greater than or equal to 0');
+    }
+  }
+};
+
+robot.numOfSensors = 100;
+console.log(robot.numOfSensors); // Output: 100
+
+robot.numOfSensors = '3'; // Output: Pass in a number that is greater than or equal to 0
+```
+
++ When we use the setter method, only values that are numbers will reassign `this._numOfSensors`
+
+Setter methods like `numOfSensors` do not need to be called with a set of parentheses. Syntactically, it looks like we’re reassigning the value of a property.
