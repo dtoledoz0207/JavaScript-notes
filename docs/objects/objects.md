@@ -8,6 +8,7 @@
 * [Methods](#Methods)
 * [Nested Objects](#Nested-Objects)
 * [Pass By Reference](#Pass-By-Reference)
+* [Looping Through Objects](#Looping-Through-Objects)
 
 
 ## Introduction to Objects
@@ -233,3 +234,47 @@ spaceship = {
 }; // Regular reassignment still works.
 ```
 + When we passed `spaceship` into that function, `obj` became a reference to the memory location of the `spaceship` object, but *not* to the spaceship variable. This is because the `obj` parameter of the `tryReassignment()` function is a variable in its own right. The body of `tryReassignment()` has no knowledge of the `spaceship` variable at all.
+
+
+## Looping Through Objects
+JavaScript has given us alternative solution for iterating through objects with the `for...in` syntax.
+
+`for...in` will execute a given block of code for each property in an object.
+
+```js
+let spaceship = {
+    crew: {
+    captain: { 
+        name: 'Lily', 
+        degree: 'Computer Engineering', 
+        cheerTeam() { console.log('You got this!') } 
+        },
+    'chief officer': { 
+        name: 'Dan', 
+        degree: 'Aerospace Engineering', 
+        agree() { console.log('I agree, captain!') } 
+        },
+    medic: { 
+        name: 'Clementine', 
+        degree: 'Physics', 
+        announce() { console.log(`Jets on!`) } },
+    translator: {
+        name: 'Shauna', 
+        degree: 'Conservation Science', 
+        powerFuel() { console.log('The tank is full!') } 
+        }
+    }
+}; 
+// for...in
+for (let crewMember in spaceship.crew) {
+  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
+}
+```
+
+Output: 
+```js
+captain: Lily
+chief officer: Dan
+medic: Clementine
+translator: Shauna
+```
