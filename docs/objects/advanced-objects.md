@@ -8,6 +8,7 @@
 * [Factory Functions](#Factory-Functions)
 * [Property Value Shorthand](#Property-Value-Shorthand)
 * [Destructured Assignment](#Destructured-Assignment)
+* [Built-in Object Methods](#Built-in-Object-Methods)
 
 
 ## The this Keyword
@@ -236,4 +237,61 @@ We can even use destructured assignment to grab nested properties of an object:
 ```js
 const {day} = vampire.preferences;
 console.log(day); // Prints 'stay inside'
+```
+
+## Built-in Object Methods
+In the previous exercises we've been creating instances of objects that have their own methods. But, we can also take advantage of built-in methods for Objects.
+
+For example, we have access to object instance methods like: `.hasOwnProperty()`, `.valueOf()`, and many more. Practice you documentation reading skills and check out: [MDN's object instance documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods).
+
+There also useful Object class methods such as `Object.assign()`, `Object.entries()`, and `Object.keys()`. [MDN's object instance documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#Methods_of_the_Object_constructor).
+
+```js
+const robot = {
+  model: 'SAL-1000',
+  mobile: true,
+  sentient: false,
+  armor: 'Steel-planed',
+  energyLevel: 75
+};
+
+const robotKeys = Object.keys(robot);
+console.log(robotKeys); 
+// Output: ['model', 'mobile', 'sentient', 'armor', 'energyLevel']
+
+const robotEntries = Object.entries(robot);
+console.log(robotEntries);
+/* Output: [ 
+  [ 'model', 'SAL-1000' ],
+  [ 'mobile', true ],
+  [ 'sentient', false ],
+  [ 'armor', 'Steel-plated' ],
+  [ 'energyLevel', 75 ] ] 
+*/
+
+const newRobot = Object.assign({}, robot, {laserBlaster: true, voiceRecognition: true});
+console.log(newRobot);
+/* Output:
+  {
+    model: 'SAL-1000',
+    mobile: true,
+    sentient: false,
+    armor: 'Steel-plated',
+    energyLevel: 75,
+    laserBlaster: true,
+    voiceRecognition: true
+  }
+*/
+
+console.log(robot);
+/*
+  {
+    model: 'SAL-1000',
+    mobile: true,
+    sentient: false,
+    armor: 'Steel-planed',
+    energyLevel: 75
+  }
+*/
+
 ```
