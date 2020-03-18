@@ -6,6 +6,7 @@
 * [Getters](#Getters)
 * [Setters](#Setters)
 * [Factory Functions](#Factory-Functions)
+* [Property Value Shorthand](#Property-Value-Shorthand)
 
 
 ## The this Keyword
@@ -176,4 +177,27 @@ tinCan.beep(); // Output: 'Beep Boop'
 
 Now we have a `tinCan` object as a result of calling `robotFactory()` with the needed arguments.
 
-With `robotFactory` in place, we don't have to create an object literal every time we need a new robot. Instead, we can invoke the `robotFactory` function with the necessary arguments.  
+With `robotFactory` in place, we don't have to create an object literal every time we need a new robot. Instead, we can invoke the `robotFactory` function with the necessary arguments.
+
+## Property Value Shorthand
+ES6 introduced some new shortcuts for assigning properties to variables known as *destructuring*.
+
+```js
+const monsterFactory = (name, age) => {
+  return {
+    name: name,
+    age: age
+  }
+};
+```
+
+Now we can use destructuring technique, called *property value shorthand*, The example below works exactly like the example above:
+
+```js
+const monsterFactory = (name, age) => {
+  return {
+    name,
+    age
+  }
+};
+```
