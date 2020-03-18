@@ -5,6 +5,7 @@
 * [Privacy](#Privacy)
 * [Getters](#Getters)
 * [Setters](#Setters)
+* [Factory Functions](#Factory-Functions)
 
 
 ## The this Keyword
@@ -151,3 +152,28 @@ robot.numOfSensors = '3'; // Output: Pass in a number that is greater than or eq
 + When we use the setter method, only values that are numbers will reassign `this._numOfSensors`
 
 Setter methods like `numOfSensors` do not need to be called with a set of parentheses. Syntactically, it looks like we’re reassigning the value of a property.
+
+## Factory Functions
+A factoty function is a function that returns an object and can be reused to make multiple object instances.
+
+Factory functions can also have parametes allowing us to customize the object that gets returned.
+
+```js
+const robotFactory = (model, mobile) => {
+  return {
+    model: model,
+    mobile: mobile,
+    beep() {
+      console.log('Beep Boop');
+    }
+  }
+}
+
+const tinCan = robotFactory('P-500', true);
+
+tinCan.beep(); // Output: 'Beep Boop'
+```
+
+Now we have a `tinCan` object as a result of calling `robotFactory()` with the needed arguments.
+
+With `robotFactory` in place, we don't have to create an object literal every time we need a new robot. Instead, we can invoke the `robotFactory` function with the necessary arguments.  
