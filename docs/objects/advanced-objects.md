@@ -7,6 +7,7 @@
 * [Setters](#Setters)
 * [Factory Functions](#Factory-Functions)
 * [Property Value Shorthand](#Property-Value-Shorthand)
+* [Destructured Assignment](#Destructured-Assignment)
 
 
 ## The this Keyword
@@ -200,4 +201,39 @@ const monsterFactory = (name, age) => {
     age
   }
 };
+```
+
+## Destructured Assignment
+We often want to extract key-value pairs from objects and save them as variables.
+
+```js
+const vampire = {
+  name: 'Dracula',
+  residence: 'Transylvania',
+  preferences: {
+    day: 'stay inside',
+    night: 'satisfy appetite'
+  }
+};
+```
+
+If we wanted to extract the `residence` property as a variable, we could using the next code:
+
+```js
+const residence = vampire.residence;
+console.log(residence); // Prints: 'Transylvania'
+```
+
+However, we can also take advantage of a destructuring technique called *destructured assignment*. In destructured assignment we create a variable with the name of an object's key that is wrapped in curly braces `{ }` and assign to it the object.
+
+```js
+const {residence} = vampire;
+console.log(residence); // Prints 'Transylvania'
+```
+
+We can even use destructured assignment to grab nested properties of an object:
+
+```js
+const {day} = vampire.preferences;
+console.log(day); // Prints 'stay inside'
 ```
