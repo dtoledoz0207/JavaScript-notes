@@ -7,6 +7,7 @@
 * [Method Calls](#Method-Calls)
 * [Inheritance I](#Inheritance-I)
 * [Inheritance II](#Inheritance-II)
+* [Inheritance III](#Inheritance-III)
 
 
 ## Introduction to Classes
@@ -207,3 +208,49 @@ class HospitalEmployee {
   }
 }
 ```
+
+## Inheritance III
+We've abstracted the shared properties and methods of our `Nurse` and `Doctor` classes into a parent class called `HospitalEmployee`.
+
+```js
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+  
+  get name() {
+    return this._name;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+```
+
+Now that we have these shared properties and methods in the parent `HospitalEmployee` class, we can extend them to the subclass `Nurse`.
+
+```js
+class Nurse extends HospitalEmployee {
+  constructor(name, certifications) {
+    super(name);
+    this._certification = certification;
+  }
+}
+
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma', 'Pediatrics']);
+```
+
+In the example, we create a new class named `Nurse` that extends the `HospitalEmployee` class. Let's pay special attention to our new keywords: `extends` and `super`.
+
++ The `extends` keyword makes the methods of the hospitalEmployee class available inside the nurse class.
++ The constructor, called when you create a new `Nurse` object, accepts two arguments, `name` `certification`.
++ The `super` keyword calls the constructor of the parent class. In this case, `super(name)` passes the name argument of the `Nurse` class to the constructor of the `HospitalEmployee` class. When the `HospitalEmployee` constructor runs, it sets `this._name = name;` for new `Nurse` instances.
++ `certifications` is a new property that is unique to the `Nurse` class, so we set it in the `Nurse` constructor.
+
++ In a `constructor()`, you must always call `super` method before you can use the `this` keyword, if you do not, JavaScript will throw a reference error. To avoid reference errors, it is best practice to call `super` on the first line of subclass constructors. 
