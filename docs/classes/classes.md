@@ -1,6 +1,7 @@
 # Classes
 
 * [Introduction to Classes](#Introduction-to-Classes)
+* [Constructor](#Constructor)
 
 
 ## Introduction to Classes
@@ -36,3 +37,21 @@ console.log(halley.behavior); // Prints: 0
 halley.incrementBehavior();
 console.log(halley.behavior); // Prints: 1
 ```
+
+## Constructor
+JavaScript calls the `constructor()` method every time it creates a new *instance* of a class.
+
+```js
+class Dog {
+  constructor(name) {
+    this.name = name;
+    this.behavior = 0;
+  }
+}
+```
+
++ `Dog` is the name of our class. By convention, we capitalize and CamelCase class names.
++ JavaScript will invoke the `constructor()` method every time we create a new instance of out `Dog` class.
++ This `constructor()` method accepts one argument, `name`.
++ Inside the constructor method, we use the `this` keyword. In the context of a class. `this` refers to an instance of that class. In the `Dog` class, we use `this` to set the value of the Dog instance's `name` property to the `name` argument.
++ The `behavior` property is always initialized to zero.
