@@ -9,6 +9,7 @@
 * [Inheritance II](#Inheritance-II)
 * [Inheritance III](#Inheritance-III)
 * [Inheritance IV](#Inheritance-IV)
+* [Inheritance V](#Inheritance-V)
 
 
 ## Introduction to Classes
@@ -295,4 +296,60 @@ nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
 nurseOlynyk.takeVacationDays(5);
 console.log(nurseOlynyk.remainingVacationDays);
 // Prints: 15
+```
+
+## Inheritance V
+In addition to the inherited features, child classes can contain their own properties, getters, setters and methods.
+
+The benefits (time saved, readability, efficiency) of inheritance grow as the number and size of your subclasses increase.
+
+One benefit is that when you need to change a method or property that multiple classes share, you can change the parent class, instead of each subclass.
+
+```js
+class HospitalEmploye {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+
+
+
+class Nurse extends HospitalEmployee {
+  constructor(name, certifications) {
+    super(name);
+    this._certifications = certifications;
+  }
+
+  get certifications() {
+    return this._certifications;
+  }
+
+  addCertification(newCertification) {
+    this._certifications.push(newCertification);
+  }
+}
+
+
+const nurseOlynyk = new Nurse('Olynyk', ['Trauma','Pediatrics']);
+
+nurseOlynyk.takeVacationDays(5);
+console.log(nurseOlynyk.remainingVacationDays);
+// Prints: 15
+
+nurseOlynyk.addCertification('Genetics');
+console.log(nurseOlynyk.certifications);
+// Prints: ['Trauma','Pediatrics', 'Genetics']
 ```
