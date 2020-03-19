@@ -19,3 +19,5 @@
 - Objects
   * [Objects](docs/objects/objects.md)
   * [Advanced Objects](docs/objects/advanced-objects.md)
+- Introduction to Classes
+  * [Classes](docs/classes/classes.md)
