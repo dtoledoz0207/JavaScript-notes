@@ -5,6 +5,7 @@
 * [Instance](#Instance)
 * [Methods](#Methods)
 * [Method Calls](#Method-Calls)
+* [Inheritance I](#Inheritance-I)
 
 
 ## Introduction to Classes
@@ -151,3 +152,33 @@ console.log(surgeonCurry.name); // Prints: 'Curry'
 surgeonCurry.takeVacationDays(3);
 console.log(surgeonCurry.remainingVacationDays); // Prints: 17
 ```
+
+## Inheritance I
+When multiple classes share properties or methodsm they become candidates for *inheritance*, a tool developers use to decrease the amount of code they need to write.
+
+With inheritance, you can create a *parent* class (also known as a superclass) with properties and methods that multiple *child* classes (also known as subclasses) share. The child classes inherit the properties and methods from their parent class.
+
+Let's abstract the shared properties and methods from our `Cat` and `Dog` classes into a parent class called `Animal`.
+
+```js
+class Animal {
+  constructor(name) {
+    this._name = name;
+    this._behavior = 0;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get behavior() {
+    return this._behavior;
+  }   
+
+  incrementBehavior() {
+    this._behavior++;
+  }
+}
+```
+
+In the example, the `Animal` class contains the properties and methods that the `Cat` and `Dog` classes share (`name`, `behavior`, `.incrementBehavior()`).
