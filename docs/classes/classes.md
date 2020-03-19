@@ -4,6 +4,7 @@
 * [Constructor](#Constructor)
 * [Instance](#Instance)
 * [Methods](#Methods)
+* [Method Calls](#Method-Calls)
 
 
 ## Introduction to Classes
@@ -107,4 +108,46 @@ class Surgeon {
 }
 ```
 
-In the example, we add getter methods for `name`, `department` and `remainingVacationDays`. Notice, we also prepended our property names with underscores (`_name`, `_department` and `_remainingVacationDays`), which indicate these properties should not be accessed directly. Under the getters we add a method named `.takeVacationDays(daysOff)` that accept one argument named `daysOff`. And inside this method, subtract `daysOff` from the number saved to `_remainingVacationDays` and sets `_remainingVacationDays` to the result.
+In the example, we add getter methods for `name`, `department` and `remainingVacationDays`.
+
+Notice, we also prepended our property names with underscores (`_name`, `_department` and `_remainingVacationDays`), which indicate these properties should not be accessed directly.
+
+Under the getters we add a method named `.takeVacationDays(daysOff)` that accept one argument named `daysOff`.
+
+And inside this method, subtract `daysOff` from the number saved to `_remainingVacationDays` and sets `_remainingVacationDays` to the result.
+
+## Method Calls
+The syntax for calling methods and getters on an instance is the same as calling them on an object, append the instance with a period, then the property or method name. **For methods, you must also include opening and closing parentheses.**
+
+```js
+class Surgeon {
+  constructor(name, department) {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get department() {
+    return this._department;
+  }
+
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+
+const surgeonCurry = new Surgeon('Curry', 'Cardiovascular');
+const surgeonDurant = new Surgeon('Durant', 'Orthopedics');
+
+console.log(surgeonCurry.name); // Prints: 'Curry'
+surgeonCurry.takeVacationDays(3);
+console.log(surgeonCurry.remainingVacationDays); // Prints: 17
+```
