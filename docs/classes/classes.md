@@ -6,6 +6,7 @@
 * [Methods](#Methods)
 * [Method Calls](#Method-Calls)
 * [Inheritance I](#Inheritance-I)
+* [Inheritance II](#Inheritance-II)
 
 
 ## Introduction to Classes
@@ -182,3 +183,27 @@ class Animal {
 ```
 
 In the example, the `Animal` class contains the properties and methods that the `Cat` and `Dog` classes share (`name`, `behavior`, `.incrementBehavior()`).
+
+## Inheritance II
+Parent class:
+
+```js
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+```
