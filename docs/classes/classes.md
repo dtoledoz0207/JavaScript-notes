@@ -3,6 +3,7 @@
 * [Introduction to Classes](#Introduction-to-Classes)
 * [Constructor](#Constructor)
 * [Instance](#Instance)
+* [Methods](#Methods)
 
 
 ## Introduction to Classes
@@ -76,3 +77,34 @@ console.log(halley.name); // Output: 'Halley'
 + We create a new variable named `halley` that will store an instance of our `Dog` class.
 + We use  the `new` keyword to generate a new instance of the `Dog` class. The `new` keyword calls the `constructor()`, runs the code inside of it, and then returns the new instance.
 + Finally, we log the value saved to the `name` key in our `halley` object.
+
+## Methods
+Class method and getter syntax is the same as it is for objects **except you can not include commas between methods.**
+
+```js
+class Surgeon {
+  constructor(name, department) {
+    this._name = name;
+    this._department = department;
+    this._remainingVacationDays = 20;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get department() {
+    return this._department;
+  }
+
+   get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+}
+```
+
+In the example, we add getter methods for `name`, `department` and `remainingVacationDays`. Notice, we also prepended our property names with underscores (`_name`, `_department` and `_remainingVacationDays`), which indicate these properties should not be accessed directly. Under the getters we add a method named `.takeVacationDays(daysOff)` that accept one argument named `daysOff`. And inside this method, subtract `daysOff` from the number saved to `_remainingVacationDays` and sets `_remainingVacationDays` to the result.
