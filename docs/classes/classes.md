@@ -10,6 +10,7 @@
 * [Inheritance III](#Inheritance-III)
 * [Inheritance IV](#Inheritance-IV)
 * [Inheritance V](#Inheritance-V)
+* [Static Methods](#Static-Methods)
 
 
 ## Introduction to Classes
@@ -353,3 +354,52 @@ nurseOlynyk.addCertification('Genetics');
 console.log(nurseOlynyk.certifications);
 // Prints: ['Trauma','Pediatrics', 'Genetics']
 ```
+
+## Static Methods
+Sometimes you will want a class to have methods that aren't available in individual instances, but that you can call directly from the class.
+
+Take the `Date` class, for example -- you can both create `Date` instances to represent whatever date you want, and call *static* methods, like `Date.now()` which returns the current date, directly from the class. The `.now()` method is static, so you can call it directly from the class, but not from an instance of the class.
+
+```js
+class HospitalEmployee {
+  constructor(name) {
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+  
+  get name() {
+    return this._name;
+  }
+  
+  get remainingVacationDays() {
+    return this._remainingVacationDays;
+  }
+  
+  takeVacationDays(daysOff) {
+    this._remainingVacationDays -= daysOff;
+  }
+  
+  static generatePassword() {
+    let randomNumber = Math.floor(Math.random() * 10000);
+    return randomNumber;
+  }
+}
+
+console.log(HospitalEmployee.generatePassword());
+// Prints: random number (0-10000)
+```
+
+Using the `static` keyword, we can only access to the `generatePassword()` by appending it to the `HospitalEmployee` class.
+
+```js
+console.log(HospitalEmployee.generatePassword());
+```
+
+You cannot access the `generatePassword()` method from instances of `HospitalEmployees` class or instances of its subclasses.
+
+```js
+const doctorPedro = new HospitalEmployee('Pedro');
+doctorPedro.generatePassword(); // TypeError
+```
+
+The example will result in an error, because you cannot call static methods on an instance.
